@@ -3,7 +3,6 @@ import random
 
 from utils.indicators import calculate_rsi, moving_average
 
-
 def generate_fake_data():
     return pd.DataFrame({
         "close": [random.randint(100, 200) for _ in range(50)]
