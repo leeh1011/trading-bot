@@ -45,12 +45,17 @@ class ExecutionEngine:
             if qty <= 0:
                 return {"error": "매수 가능 수량 없음"}
 
-            return self.kis_api.place_order(
+            result = self.kis_api.place_order(
                 symbol=symbol,
                 qty=qty,
                 side="BUY",
                 price=0
             )
+
+            balance = self.kis_api.get_balance()
+            self.portfolio.sync_from_kis_balance(balance)
+
+            return result
 
         if action == "SELL":
             position = self.portfolio.positions.get(symbol)
@@ -58,9 +63,14 @@ class ExecutionEngine:
             if not position:
                 return {"error": "보유 수량 없음"}
 
-            return self.kis_api.place_order(
+            result = self.kis_api.place_order(
                 symbol=symbol,
                 qty=position["qty"],
                 side="SELL",
                 price=0
             )
+
+            balance = self.kis_api.get_balance()
+            self.portfolio.sync_from_kis_balance(balance)
+
+            return result

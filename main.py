@@ -56,7 +56,12 @@ def main():
 
     strategy = Strategy()
     portfolio = Portfolio()
-    execution = ExecutionEngine(portfolio)
+
+    balance = api.get_balance()
+    synced = portfolio.sync_from_kis_balance(balance)
+    print("🔄 계좌 동기화 완료:", synced)
+
+    execution = ExecutionEngine(portfolio,api)
     approval = ApprovalManager()
     bot = TelegramBot(approval, execution)
 
