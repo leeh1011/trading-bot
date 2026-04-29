@@ -6,7 +6,8 @@ from settings import (
     KIS_ACCOUNT,
     KIS_ACCOUNT_PRODUCT,
 )
-
+import time
+from database.db import log_error
 
 class KISAPI:
 
@@ -14,6 +15,9 @@ class KISAPI:
         self.access_token = None
 
     def get_token(self):
+        if self.access_token:
+            return self.access_token
+
         url = f"{KIS_URL}/oauth2/tokenP"
 
         headers = {"content-type": "application/json"}
@@ -23,14 +27,23 @@ class KISAPI:
             "appsecret": KIS_APP_SECRET
         }
 
-        res = requests.post(url, headers=headers, json=body)
-        data = res.json()
+        try:
+            res = requests.post(url, headers=headers, json=body, timeout=10)
+            data = res.json()
 
-        print("토큰 응답:", data)  # 디버깅용
+            if "access_token" not in data:
+                log_error("KIS.get_token", str(data))
+                print("❌ 토큰 발급 실패:", data)
+                return None
 
-        self.access_token = data.get("access_token")
+            self.access_token = data["access_token"]
+            print("✅ KIS 토큰 발급 성공")
+            return self.access_token
 
-        return self.access_token
+        except Exception as e:
+            log_error("KIS.get_token", str(e))
+            print("❌ 토큰 요청 예외:", e)
+            return None
 
     def get_price(self, symbol):
         url = f"{KIS_URL}/uapi/domestic-stock/v1/quotations/inquire-price"
@@ -47,7 +60,10 @@ class KISAPI:
             "fid_input_iscd": symbol
         }
 
-        res = requests.get(url, headers=headers, params=params)
+        res = self._request_with_retry("GET", url, headers=headers, params=params)
+
+        if res is None:
+            return {"error": "request failed"}
 
         return res.json()
     
@@ -79,7 +95,11 @@ class KISAPI:
             "FID_PW_DATA_INCU_YN": "Y"
         }
 
-        res = requests.get(url, headers=headers, params=params)
+        res = self._request_with_retry("GET", url, headers=headers, params=params)
+
+        if res is None:
+            return pd.DataFrame()
+
         data = res.json()
 
         if data.get("rt_cd") != "0":
@@ -138,7 +158,11 @@ class KISAPI:
             "CTX_AREA_NK100": "",
         }
 
-        res = requests.get(url, headers=headers, params=params)
+        res = self._request_with_retry("GET", url, headers=headers, params=params)
+
+        if res is None:
+            return {"error": "request failed"}
+
         return res.json()
     
     def place_order(self, symbol, qty, side, price=0):
@@ -175,9 +199,44 @@ class KISAPI:
             "custtype": "P",
         }
 
-        res = requests.post(url, headers=headers, json=body, timeout=10)
+        res = self._request_with_retry("GET", url, headers=headers, params=params)
+
+        if res is None:
+            return {"error": "request failed"}
 
         print("주문 status:", res.status_code)
         print("주문 text:", res.text)
 
         return res.json()
+    
+    def _request_with_retry(self, method, url, headers=None, params=None, json=None, retries=3):
+        for attempt in range(1, retries + 1):
+            try:
+                if method == "GET":
+                    res = requests.get(
+                        url,
+                        headers=headers,
+                        params=params,
+                        timeout=10
+                    )
+                elif method == "POST":
+                    res = requests.post(
+                        url,
+                        headers=headers,
+                        json=json,
+                        timeout=10
+                    )
+                else:
+                    raise ValueError("method must be GET or POST")
+
+                return res
+
+            except Exception as e:
+                log_error(
+                    "KIS.request",
+                    f"attempt={attempt}, error={e}"
+                )
+                print(f"⚠️ API 재시도 {attempt}/{retries}: {e}")
+                time.sleep(1)
+
+        return None

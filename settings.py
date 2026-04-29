@@ -6,7 +6,7 @@ load_dotenv()
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 CHAT_ID = int(os.getenv("CHAT_ID", "0"))
 
-MODE = "paper"       #테스트 할 때는 "paper"로 변경.
+MODE = "kis_mock"       #테스트 할 때는 "paper"로 변경.
 
 SYMBOLS = [
     "005930",
