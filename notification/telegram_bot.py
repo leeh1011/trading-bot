@@ -1,7 +1,7 @@
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CallbackQueryHandler
 from settings import TELEGRAM_TOKEN, CHAT_ID
-
+from database.db import log_approval
 
 class TelegramBot:
 
@@ -34,12 +34,12 @@ class TelegramBot:
         reply_markup = InlineKeyboardMarkup(keyboard)
 
         text = f"""
-📈 신호 발생
+                📈 신호 발생
 
-종목: {signal['symbol']}
-가격: {signal['price']}
-이유: {signal['reason']}
-"""
+                종목: {signal['symbol']}
+                가격: {signal['price']}
+                이유: {signal['reason']}
+                """
 
         self.updater.bot.send_message(
             chat_id=CHAT_ID,
@@ -57,13 +57,20 @@ class TelegramBot:
             order = self.approval_manager.approve(order_id)
 
             if order:
-                result = self.execution_engine.execute(order["signal"])
+                signal = order["signal"]
+                log_approval(order_id, signal["symbol"], signal["action"], "APPROVE")
+                result = self.execution_engine.execute(signal)
                 query.edit_message_text(f"✅ 실행됨: {result}")
             else:
                 query.edit_message_text("❌ 만료된 주문")
 
         elif action == "reject":
-            self.approval_manager.reject(order_id)
+            order = self.approval_manager.reject(order_id)
+
+            if order:
+                signal = order["signal"]
+                log_approval(order_id, signal["symbol"], signal["action"], "REJECT")
+
             query.edit_message_text("❌ 거절됨")
 
         query.answer()

@@ -8,7 +8,9 @@ from core.portfolio import Portfolio
 from core.execution import ExecutionEngine
 from notification.approval_manager import ApprovalManager
 from notification.telegram_bot import TelegramBot
+from database.db import init_db, log_signal, log_error
 
+init_db()
 
 def is_market_open():
     now = datetime.now()
@@ -97,6 +99,7 @@ def main():
                 continue
 
             print(f"📈 신호 발생: {signal}")
+            log_signal(signal)
 
             if signal["action"] == "BUY":
                 bot.send_signal(signal)

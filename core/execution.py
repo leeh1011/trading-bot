@@ -1,4 +1,5 @@
 from settings import MODE, TRADE_RATIO
+from database.db import log_order
 
 
 class ExecutionEngine:
@@ -52,6 +53,8 @@ class ExecutionEngine:
                 price=0
             )
 
+            log_order(symbol, action, qty, price, "SENT", result)
+
             balance = self.kis_api.get_balance()
             self.portfolio.sync_from_kis_balance(balance)
 
@@ -69,6 +72,8 @@ class ExecutionEngine:
                 side="SELL",
                 price=0
             )
+
+            log_order(symbol, action, qty, price, "SENT", result)
 
             balance = self.kis_api.get_balance()
             self.portfolio.sync_from_kis_balance(balance)
