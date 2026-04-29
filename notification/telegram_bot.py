@@ -2,6 +2,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CallbackQueryHandler
 from settings import TELEGRAM_TOKEN, CHAT_ID
 from database.db import log_approval
+from telegram.utils.request import Request
 
 class TelegramBot:
 
@@ -9,13 +10,35 @@ class TelegramBot:
         self.approval_manager = approval_manager
         self.execution_engine = execution_engine
 
-        self.updater = Updater(token=TELEGRAM_TOKEN, use_context=True)
+        request = Request(
+            connect_timeout=30,
+            read_timeout=30,
+            con_pool_size=8
+        )
+
+        self.updater = Updater(
+            token=TELEGRAM_TOKEN,
+            request_kwargs={
+                "connect_timeout": 30,
+                "read_timeout": 30,
+            },
+            use_context=True
+        )
+        
         dp = self.updater.dispatcher
 
         dp.add_handler(CallbackQueryHandler(self.button_handler))
 
-        self.updater.start_polling()
-        print("🤖 Telegram Bot 실행됨")
+        try:
+            self.updater.start_polling(
+                timeout=10,
+                read_latency=2,
+                bootstrap_retries=3
+            )
+            print("🤖 Telegram Bot 실행됨")
+        except Exception as e:
+            print(f"❌ Telegram Bot 연결 실패: {e}")
+            raise
 
     def send_signal(self, signal):
         order_id = self.approval_manager.create(signal)
@@ -41,10 +64,16 @@ class TelegramBot:
                 이유: {signal['reason']}
                 """
 
-        self.updater.bot.send_message(
+        message = self.updater.bot.send_message(
             chat_id=CHAT_ID,
             text=text,
             reply_markup=reply_markup
+        )
+
+        self.approval_manager.attach_message(
+            order_id=order_id,
+            chat_id=CHAT_ID,
+            message_id=message.message_id
         )
 
     def button_handler(self, update, context):

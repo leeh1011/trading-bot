@@ -12,3 +12,6 @@ config.py
 # OS files
 .DS_Stores
 Thumbs.db
+
+#db
+*.db

@@ -108,7 +108,7 @@ def main():
                 # RSI 같은 전략 매도는 사용자 승인
                 bot.send_signal(signal)
 
-        approval.cleanup()
+        approval.cleanup(bot.updater.bot)
 
         print("⏳ 다음 5분 대기...")
         time.sleep(LOOP_INTERVAL)
