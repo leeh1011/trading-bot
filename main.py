@@ -1,7 +1,7 @@
 import time
 from datetime import datetime
 
-from config import SYMBOLS, LOOP_INTERVAL, RISK
+from settings import SYMBOLS, LOOP_INTERVAL, RISK
 from utils.kis_api import KISAPI
 from core.strategy import Strategy
 from core.portfolio import Portfolio

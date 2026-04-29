@@ -1,5 +1,11 @@
 import requests
-from config import KIS_APP_KEY, KIS_APP_SECRET, KIS_URL
+from settings import (
+    KIS_APP_KEY,
+    KIS_APP_SECRET,
+    KIS_URL,
+    KIS_ACCOUNT,
+    KIS_ACCOUNT_PRODUCT,
+)
 
 
 class KISAPI:
@@ -100,3 +106,78 @@ class KISAPI:
 
         df = df.sort_values("time").reset_index(drop=True)
         return df
+    
+    def get_balance(self):
+        """
+        국내주식 잔고 조회
+        모의투자 tr_id: VTTC8434R
+        실전투자 tr_id: TTTC8434R
+        """
+        url = f"{KIS_URL}/uapi/domestic-stock/v1/trading/inquire-balance"
+
+        headers = {
+            "content-type": "application/json",
+            "authorization": f"Bearer {self.access_token}",
+            "appkey": KIS_APP_KEY,
+            "appsecret": KIS_APP_SECRET,
+            "tr_id": "VTTC8434R",
+            "custtype": "P",
+        }
+
+        params = {
+            "CANO": KIS_ACCOUNT,
+            "ACNT_PRDT_CD": KIS_ACCOUNT_PRODUCT,
+            "AFHR_FLPR_YN": "N",
+            "OFL_YN": "",
+            "INQR_DVSN": "02",
+            "UNPR_DVSN": "01",
+            "FUND_STTL_ICLD_YN": "N",
+            "FNCG_AMT_AUTO_RDPT_YN": "N",
+            "PRCS_DVSN": "01",
+            "CTX_AREA_FK100": "",
+            "CTX_AREA_NK100": "",
+        }
+
+        res = requests.get(url, headers=headers, params=params)
+        return res.json()
+    
+    def place_order(self, symbol, qty, side, price=0):
+        """
+        국내주식 모의투자 주문
+        side: "BUY" or "SELL"
+        price=0 이면 시장가
+        """
+        url = f"{KIS_URL}/uapi/domestic-stock/v1/trading/order-cash"
+
+        if side == "BUY":
+            tr_id = "VTTC0802U"
+        elif side == "SELL":
+            tr_id = "VTTC0801U"
+        else:
+            raise ValueError("side must be BUY or SELL")
+
+        # 시장가: ORD_DVSN = "01", ORD_UNPR = "0"
+        body = {
+            "CANO": KIS_ACCOUNT,
+            "ACNT_PRDT_CD": KIS_ACCOUNT_PRODUCT,
+            "PDNO": symbol,
+            "ORD_DVSN": "01",
+            "ORD_QTY": str(int(qty)),
+            "ORD_UNPR": str(int(price)),
+        }
+
+        headers = {
+            "content-type": "application/json",
+            "authorization": f"Bearer {self.access_token}",
+            "appkey": KIS_APP_KEY,
+            "appsecret": KIS_APP_SECRET,
+            "tr_id": tr_id,
+            "custtype": "P",
+        }
+
+        res = requests.post(url, headers=headers, json=body, timeout=10)
+
+        print("주문 status:", res.status_code)
+        print("주문 text:", res.text)
+
+        return res.json()

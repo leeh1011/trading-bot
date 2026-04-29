@@ -1,6 +1,6 @@
 import time
 import uuid
-from config import APPROVAL_TIMEOUT
+from settings import APPROVAL_TIMEOUT
 
 
 class ApprovalManager:

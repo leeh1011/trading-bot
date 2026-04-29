@@ -1,6 +1,6 @@
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CallbackQueryHandler
-from config import TELEGRAM_TOKEN, CHAT_ID
+from settings import TELEGRAM_TOKEN, CHAT_ID
 
 
 class TelegramBot:

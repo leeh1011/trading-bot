@@ -1,4 +1,4 @@
-from config import MODE, TRADE_RATIO
+from settings import MODE, TRADE_RATIO
 
 
 class ExecutionEngine:

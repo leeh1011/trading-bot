@@ -6,6 +6,7 @@ __pycache__/
 venv/
 
 # Secrets (절대 업로드 금지)
+.env
 config.py
 
 # OS files
