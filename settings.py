@@ -6,7 +6,7 @@ load_dotenv()
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 CHAT_ID = int(os.getenv("CHAT_ID", "0"))
 
-MODE = "paper"
+MODE = "kis_mock"       #테스트 할 때는 "paper"로 변경.
 
 SYMBOLS = [
     "005930",
@@ -16,7 +16,8 @@ SYMBOLS = [
 
 TRADE_RATIO = 0.2
 APPROVAL_TIMEOUT = 120
-LOOP_INTERVAL = 300
+LOOP_INTERVAL = 30
+SIGNAL_COOLDOWN_SECONDS = 300
 
 RISK = {
     "stop_loss": -0.03,

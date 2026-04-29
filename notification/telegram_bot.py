@@ -20,6 +20,10 @@ class TelegramBot:
     def send_signal(self, signal):
         order_id = self.approval_manager.create(signal)
 
+        if order_id is None:
+            print(f"⚠️ 중복/쿨다운으로 신호 무시: {signal['symbol']}")
+            return
+
         keyboard = [
             [
                 InlineKeyboardButton("✅ 승인", callback_data=f"approve_{order_id}"),

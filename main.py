@@ -88,6 +88,10 @@ def main():
             # 전략 신호 생성
             signal = strategy.generate_signal(df, symbol)
 
+            if signal and signal["action"] == "BUY" and symbol in portfolio.positions:
+                print(f"⚠️ 이미 보유 중이라 BUY 무시: {symbol}")
+                continue
+
             if not signal:
                 print(f"신호 없음: {symbol}")
                 continue
