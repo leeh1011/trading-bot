@@ -1,0 +1,169 @@
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 10000000.0, 'positions': {'005930': {'qty': 1, 'avg_price': 225500.0}}}
+Telegram Bot 실행됨
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\main.py", line 10, in <module>
+    from notification.telegram_bot import TelegramBot
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 2, in <module>
+    from telegram.ext import Updater, CallbackQueryHandler
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\__init__.py", line 30, in <module>
+    from .jobqueue import JobQueue, Job
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\jobqueue.py", line 26, in <module>
+    from apscheduler.events import EVENT_JOB_ERROR, EVENT_JOB_EXECUTED, JobEvent
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\apscheduler\__init__.py", line 1, in <module>
+    from pkg_resources import get_distribution, DistributionNotFound
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\pkg_resources\__init__.py", line 3259, in <module>
+    @_call_aside
+     ^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\pkg_resources\__init__.py", line 3234, in _call_aside
+    f(*args, **kwargs)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\pkg_resources\__init__.py", line 3295, in _initialize_master_working_set
+    list(map(working_set.add_entry, sys.path))
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\pkg_resources\__init__.py", line 621, in add_entry
+    for dist in find_distributions(entry, True):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\pkg_resources\__init__.py", line 2092, in find_on_path
+    path_item_entries = _by_version_descending(filtered)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\pkg_resources\__init__.py", line 2062, in _by_version_descending
+    return sorted(names, key=_by_version, reverse=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\pkg_resources\__init__.py", line 2085, in <genexpr>
+    filtered = (
+               ^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\pkg_resources\__init__.py", line 2078, in <genexpr>
+    os.path.join(path_item, child)
+  File "<frozen ntpath>", line 107, in join
+KeyboardInterrupt
+^CKIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 10000000.0, 'positions': {'005930': {'qty': 1, 'avg_price': 225500.0}}}
+Telegram Bot 실행됨
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\main.py", line 118, in <module>
+    main()
+  File "C:\Users\ljeno\trading-bot\main.py", line 73, in main
+    time.sleep(60)
+KeyboardInterrupt
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 10000000.0, 'positions': {'005930': {'qty': 1, 'avg_price': 225500.0}}}
+Telegram Bot 실행됨
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\main.py", line 118, in <module>
+    main()
+  File "C:\Users\ljeno\trading-bot\main.py", line 73, in main
+    time.sleep(60)
+KeyboardInterrupt
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 10000000.0, 'positions': {'005930': {'qty': 1, 'avg_price': 225500.0}}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+신호 없음: 005930
+신호 없음: 000660
+신호 발생: {'action': 'SELL', 'symbol': '035420', 'price': 216000.0, 'reason': 'SELL: RSI=20.00 or price<MA20'}
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+신호 없음: 005930
+분봉 조회 실패: {'rt_cd': '1', 'msg1': '초당 거래건수를 초과하였습니다.', 'msg_cd': 'EGW00201', 'message': 'EGW00201'}
+데이터 부족: 000660
+신호 발생: {'action': 'SELL', 'symbol': '035420', 'price': 216500.0, 'reason': 'SELL: RSI=30.77 or price<MA20'}
+다음 5분 대기...
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 10000000.0, 'positions': {'005930': {'qty': 1, 'avg_price': 225500.0}}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+신호 발생: {'action': 'SELL', 'symbol': '005930', 'price': 228500.0, 'reason': 'SELL: RSI=53.33 or price<MA20'}
+보유 없어서 SELL 무시: 000660
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 87, in button_handler
+    result = self.execution_engine.execute(signal)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\core\execution.py", line 16, in execute
+    return self._kis_mock_execute(signal)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\core\execution.py", line 69, in _kis_mock_execute
+    result = self.kis_api.place_order(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\utils\kis_api.py", line 202, in place_order
+    res = self._request_with_retry("GET", url, headers=headers, params=params)
+                                                                       ^^^^^^
+NameError: name 'params' is not defined
+보유 없어서 SELL 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+신호 발생: {'action': 'SELL', 'symbol': '005930', 'price': 228250.0, 'reason': 'SELL: RSI=46.15 or price<MA20'}
+보유 없어서 SELL 무시: 000660
+보유 없어서 SELL 무시: 035420
+다음 5분 대기...
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 87, in button_handler
+    result = self.execution_engine.execute(signal)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\core\execution.py", line 16, in execute
+    return self._kis_mock_execute(signal)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\core\execution.py", line 69, in _kis_mock_execute
+    result = self.kis_api.place_order(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\utils\kis_api.py", line 202, in place_order
+    res = self._request_with_retry("GET", url, headers=headers, params=params)
+                                                                       ^^^^^^
+NameError: name 'params' is not defined
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 10000000.0, 'positions': {'005930': {'qty': 1, 'avg_price': 225500.0}}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+신호 발생: {'action': 'SELL', 'symbol': '005930', 'price': 227250.0, 'reason': 'SELL: RSI=30.77 or price<MA20'}
+보유 없어서 SELL 무시: 000660
+보유 없어서 SELL 무시: 035420
+다음 5분 대기...
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 10000000.0, 'positions': {}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+보유 없어서 SELL 무시: 005930
+보유 없어서 SELL 무시: 000660
+보유 없어서 SELL 무시: 035420
+다음 5분 대기...

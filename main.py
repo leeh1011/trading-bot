@@ -36,7 +36,7 @@ def check_auto_exit(symbol, current_price, portfolio, execution):
             "price": current_price,
             "reason": f"자동 손절 {pnl_rate:.2%}"
         }
-        print(f"🚨 자동 손절 실행: {signal}")
+        print(f"자동 손절 실행: {signal}")
         execution.execute(signal)
 
     elif pnl_rate >= RISK["take_profit"]:
@@ -46,12 +46,12 @@ def check_auto_exit(symbol, current_price, portfolio, execution):
             "price": current_price,
             "reason": f"자동 익절 {pnl_rate:.2%}"
         }
-        print(f"💰 자동 익절 실행: {signal}")
+        print(f"자동 익절 실행: {signal}")
         execution.execute(signal)
 
 
 def main():
-    print("🚀 KIS Auto Trading Bot Started")
+    print("KIS Auto Trading Bot Started")
 
     api = KISAPI()
     api.get_token()
@@ -61,7 +61,7 @@ def main():
 
     balance = api.get_balance()
     synced = portfolio.sync_from_kis_balance(balance)
-    print("🔄 계좌 동기화 완료:", synced)
+    print("계좌 동기화 완료:", synced)
 
     execution = ExecutionEngine(portfolio,api)
     approval = ApprovalManager()
@@ -69,17 +69,18 @@ def main():
 
     while True:
         if not is_market_open():
-            print("⏸ 장중 아님 - 대기 중")
+            print("장중 아님 - 대기 중")
             time.sleep(60)
             continue
 
-        print("\n📊 5분봉 시장 스캔 중...")
+        print("\n5분봉 시장 스캔 중...")
 
         for symbol in SYMBOLS:
+            time.sleep(0.4)
             df = api.get_minute_chart(symbol)
 
             if df.empty or len(df) < 20:
-                print(f"❌ 데이터 부족: {symbol}")
+                print(f"데이터 부족: {symbol}")
                 continue
 
             current_price = float(df.iloc[-1]["close"])
@@ -91,14 +92,24 @@ def main():
             signal = strategy.generate_signal(df, symbol)
 
             if signal and signal["action"] == "BUY" and symbol in portfolio.positions:
-                print(f"⚠️ 이미 보유 중이라 BUY 무시: {symbol}")
+                print(f"이미 보유 중이라 BUY 무시: {symbol}")
                 continue
 
             if not signal:
                 print(f"신호 없음: {symbol}")
                 continue
 
-            print(f"📈 신호 발생: {signal}")
+            # BUY 중복 방지
+            if signal["action"] == "BUY" and symbol in portfolio.positions:
+                print(f"이미 보유 중이라 BUY 무시: {symbol}")
+                continue
+
+            # SELL 보유 없으면 무시
+            if signal["action"] == "SELL" and symbol not in portfolio.positions:
+                print(f"보유 없어서 SELL 무시: {symbol}")
+                continue
+
+            print(f"신호 발생: {signal}")
             log_signal(signal)
 
             if signal["action"] == "BUY":
@@ -110,7 +121,7 @@ def main():
 
         approval.cleanup(bot.updater.bot)
 
-        print("⏳ 다음 5분 대기...")
+        print("다음 5분 대기...")
         time.sleep(LOOP_INTERVAL)
 
 

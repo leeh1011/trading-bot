@@ -8,7 +8,7 @@ class Portfolio:
         qty = int(amount // price)
 
         if qty <= 0:
-            print("❌ 매수 실패: 금액 부족")
+            print("매수 실패: 금액 부족")
             return None
 
         cost = qty * price
@@ -19,7 +19,7 @@ class Portfolio:
             "avg_price": price
         }
 
-        print(f"✅ 매수: {symbol} | 수량: {qty} | 가격: {price}")
+        print(f"매수: {symbol} | 수량: {qty} | 가격: {price}")
 
         return {
             "symbol": symbol,
@@ -29,7 +29,7 @@ class Portfolio:
 
     def sell(self, symbol, price):
         if symbol not in self.positions:
-            print("❌ 매도 실패: 보유 없음")
+            print("매도 실패: 보유 없음")
             return None
 
         pos = self.positions.pop(symbol)
@@ -37,7 +37,7 @@ class Portfolio:
         revenue = pos["qty"] * price
         self.cash += revenue
 
-        print(f"✅ 매도: {symbol} | 수량: {pos['qty']} | 가격: {price}")
+        print(f"매도: {symbol} | 수량: {pos['qty']} | 가격: {price}")
 
         return {
             "symbol": symbol,
@@ -52,28 +52,28 @@ class Portfolio:
         }
     
     def sync_from_kis_balance(self, balance_data):
-        """
-        한국투자 잔고 조회 결과로 내부 포트폴리오 동기화
-        """
         self.positions = {}
 
         stocks = balance_data.get("output1", [])
         summary = balance_data.get("output2", [])
 
         for item in stocks:
-            symbol = item.get("pdno")
-            qty = int(item.get("hldg_qty", 0))
-            avg_price = float(item.get("pchs_avg_pric", 0))
+            symbol = item.get("pdno") or item.get("prdt_code")
+            qty = int(float(item.get("hldg_qty", 0) or 0))
+            avg_price = float(item.get("pchs_avg_pric", 0) or 0)
 
-            if qty > 0:
+            if qty > 0 and symbol:
                 self.positions[symbol] = {
                     "qty": qty,
                     "avg_price": avg_price
                 }
 
         if summary:
-            cash = summary[0].get("dnca_tot_amt")
-            if cash is not None:
-                self.cash = float(cash)
+            cash = (
+                summary[0].get("dnca_tot_amt")
+                or summary[0].get("nass_amt")
+                or self.cash
+            )
+            self.cash = float(cash)
 
         return self.status()

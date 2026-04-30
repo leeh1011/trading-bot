@@ -33,16 +33,16 @@ class KISAPI:
 
             if "access_token" not in data:
                 log_error("KIS.get_token", str(data))
-                print("❌ 토큰 발급 실패:", data)
+                print("토큰 발급 실패:", data)
                 return None
 
             self.access_token = data["access_token"]
-            print("✅ KIS 토큰 발급 성공")
+            print("KIS 토큰 발급 성공")
             return self.access_token
 
         except Exception as e:
             log_error("KIS.get_token", str(e))
-            print("❌ 토큰 요청 예외:", e)
+            print("토큰 요청 예외:", e)
             return None
 
     def get_price(self, symbol):
@@ -103,7 +103,7 @@ class KISAPI:
         data = res.json()
 
         if data.get("rt_cd") != "0":
-            print("❌ 분봉 조회 실패:", data)
+            print("분봉 조회 실패:", data)
             return pd.DataFrame()
 
         rows = data.get("output2", [])
@@ -165,47 +165,39 @@ class KISAPI:
 
         return res.json()
     
-    def place_order(self, symbol, qty, side, price=0):
-        """
-        국내주식 모의투자 주문
-        side: "BUY" or "SELL"
-        price=0 이면 시장가
-        """
+    def place_order(self, symbol, qty, side="BUY", price=0):
+        self.get_token()
+
         url = f"{KIS_URL}/uapi/domestic-stock/v1/trading/order-cash"
 
-        if side == "BUY":
-            tr_id = "VTTC0802U"
-        elif side == "SELL":
-            tr_id = "VTTC0801U"
-        else:
-            raise ValueError("side must be BUY or SELL")
-
-        # 시장가: ORD_DVSN = "01", ORD_UNPR = "0"
-        body = {
-            "CANO": KIS_ACCOUNT,
-            "ACNT_PRDT_CD": KIS_ACCOUNT_PRODUCT,
-            "PDNO": symbol,
-            "ORD_DVSN": "01",
-            "ORD_QTY": str(int(qty)),
-            "ORD_UNPR": str(int(price)),
-        }
+        tr_id = "VTTC0802U" if side == "BUY" else "VTTC0801U"
 
         headers = {
             "content-type": "application/json",
             "authorization": f"Bearer {self.access_token}",
             "appkey": KIS_APP_KEY,
             "appsecret": KIS_APP_SECRET,
-            "tr_id": tr_id,
-            "custtype": "P",
+            "tr_id": tr_id
         }
 
-        res = self._request_with_retry("GET", url, headers=headers, params=params)
+        body = {
+            "CANO": KIS_ACCOUNT[:8],
+            "ACNT_PRDT_CD": "01",
+            "PDNO": symbol,
+            "ORD_DVSN": "01",   # 시장가
+            "ORD_QTY": str(qty),
+            "ORD_UNPR": "0"
+        }
+
+        res = self._request_with_retry(
+            "POST",
+            url,
+            headers=headers,
+            json=body
+        )
 
         if res is None:
-            return {"error": "request failed"}
-
-        print("주문 status:", res.status_code)
-        print("주문 text:", res.text)
+            return {"error": "주문 요청 실패"}
 
         return res.json()
     
@@ -236,7 +228,7 @@ class KISAPI:
                     "KIS.request",
                     f"attempt={attempt}, error={e}"
                 )
-                print(f"⚠️ API 재시도 {attempt}/{retries}: {e}")
+                print(f"API 재시도 {attempt}/{retries}: {e}")
                 time.sleep(1)
 
         return None

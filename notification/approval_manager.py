@@ -64,7 +64,7 @@ class ApprovalManager:
                         chat_id=data["chat_id"],
                         message_id=data["message_id"],
                         text=(
-                            "⏰ 승인 시간 만료\n\n"
+                            "승인 시간 만료\n\n"
                             f"종목: {signal['symbol']}\n"
                             f"액션: {signal['action']}\n"
                             f"가격: {signal['price']}\n"
@@ -72,7 +72,7 @@ class ApprovalManager:
                         )
                     )
                 except Exception as e:
-                    print(f"❌ 만료 메시지 수정 실패: {e}")
+                    print(f"만료 메시지 수정 실패: {e}")
 
-            print(f"⏰ 만료됨: {order_id}")
+            print(f"만료됨: {order_id}")
             self.pending.pop(order_id, None)

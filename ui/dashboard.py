@@ -27,7 +27,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("📊 Trading Bot Dashboard")
+st.title("Trading Bot Dashboard")
 
 signals = safe_load("signals")
 orders = safe_load("orders")
@@ -43,25 +43,25 @@ col4.metric("에러 수", len(errors))
 
 st.divider()
 
-st.subheader("📈 최근 신호")
+st.subheader("최근 신호")
 if signals.empty:
     st.info("신호 데이터 없음")
 else:
     st.dataframe(signals, width="stretch")
 
-st.subheader("🧾 최근 주문")
+st.subheader("최근 주문")
 if orders.empty:
     st.info("주문 데이터 없음")
 else:
     st.dataframe(orders, width="stretch")
 
-st.subheader("✅ 승인/거절 기록")
+st.subheader("승인/거절 기록")
 if approvals.empty:
     st.info("승인 데이터 없음")
 else:
     st.dataframe(approvals, width="stretch")
 
-st.subheader("🚨 에러 로그")
+st.subheader("에러 로그")
 if errors.empty:
     st.success("에러 없음")
 else:
