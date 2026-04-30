@@ -10,23 +10,23 @@ from notification.approval_manager import ApprovalManager
 from notification.telegram_bot import TelegramBot
 from database.db import init_db, log_signal, log_error
 
-init_db()
 
 def is_market_open():
     now = datetime.now()
-    current = now.strftime("%H:%M")
 
-    # 국내장 기준
+    # 주말 제외: 월=0, 일=6
+    if now.weekday() >= 5:
+        return False
+
+    current = now.strftime("%H:%M")
     return "09:00" <= current <= "15:30"
 
 
 def check_auto_exit(symbol, current_price, portfolio, execution):
-    positions = portfolio.positions
-
-    if symbol not in positions:
+    if symbol not in portfolio.positions:
         return
 
-    avg_price = positions[symbol]["avg_price"]
+    avg_price = float(portfolio.positions[symbol]["avg_price"])
     pnl_rate = (current_price - avg_price) / avg_price
 
     if pnl_rate <= RISK["stop_loss"]:
@@ -37,7 +37,8 @@ def check_auto_exit(symbol, current_price, portfolio, execution):
             "reason": f"자동 손절 {pnl_rate:.2%}"
         }
         print(f"자동 손절 실행: {signal}")
-        execution.execute(signal)
+        result = execution.execute(signal)
+        print("자동 손절 결과:", result)
 
     elif pnl_rate >= RISK["take_profit"]:
         signal = {
@@ -47,10 +48,25 @@ def check_auto_exit(symbol, current_price, portfolio, execution):
             "reason": f"자동 익절 {pnl_rate:.2%}"
         }
         print(f"자동 익절 실행: {signal}")
-        execution.execute(signal)
+        result = execution.execute(signal)
+        print("자동 익절 결과:", result)
+
+
+def sync_balance_safe(api, portfolio):
+    try:
+        balance = api.get_balance()
+        synced = portfolio.sync_from_kis_balance(balance)
+        print("계좌 동기화 완료:", synced)
+        return synced
+    except Exception as e:
+        log_error("main.sync_balance_safe", str(e))
+        print("계좌 동기화 실패:", e)
+        return None
 
 
 def main():
+    init_db()
+
     print("KIS Auto Trading Bot Started")
 
     api = KISAPI()
@@ -59,70 +75,77 @@ def main():
     strategy = Strategy()
     portfolio = Portfolio()
 
-    balance = api.get_balance()
-    synced = portfolio.sync_from_kis_balance(balance)
-    print("계좌 동기화 완료:", synced)
+    sync_balance_safe(api, portfolio)
 
-    execution = ExecutionEngine(portfolio,api)
+    execution = ExecutionEngine(portfolio, api)
     approval = ApprovalManager()
     bot = TelegramBot(approval, execution)
 
+    last_balance_sync = time.time()
+
     while True:
-        if not is_market_open():
-            print("장중 아님 - 대기 중")
-            time.sleep(60)
-            continue
-
-        print("\n5분봉 시장 스캔 중...")
-
-        for symbol in SYMBOLS:
-            time.sleep(0.4)
-            df = api.get_minute_chart(symbol)
-
-            if df.empty or len(df) < 20:
-                print(f"데이터 부족: {symbol}")
+        try:
+            if not is_market_open():
+                print("장중 아님 - 대기 중")
+                approval.cleanup(bot.updater.bot)
+                time.sleep(60)
                 continue
 
-            current_price = float(df.iloc[-1]["close"])
+            print("\n5분봉 시장 스캔 중...")
 
-            # 손절/익절은 자동 매도
-            check_auto_exit(symbol, current_price, portfolio, execution)
+            # 10분마다 잔고 재동기화
+            if time.time() - last_balance_sync > 600:
+                sync_balance_safe(api, portfolio)
+                last_balance_sync = time.time()
 
-            # 전략 신호 생성
-            signal = strategy.generate_signal(df, symbol)
+            for symbol in SYMBOLS:
+                try:
+                    time.sleep(0.5)  # KIS 초당 요청 제한 완화
 
-            if signal and signal["action"] == "BUY" and symbol in portfolio.positions:
-                print(f"이미 보유 중이라 BUY 무시: {symbol}")
-                continue
+                    df = api.get_minute_chart(symbol)
 
-            if not signal:
-                print(f"신호 없음: {symbol}")
-                continue
+                    if df.empty or len(df) < 20:
+                        print(f"데이터 부족: {symbol}")
+                        continue
 
-            # BUY 중복 방지
-            if signal["action"] == "BUY" and symbol in portfolio.positions:
-                print(f"이미 보유 중이라 BUY 무시: {symbol}")
-                continue
+                    current_price = float(df.iloc[-1]["close"])
 
-            # SELL 보유 없으면 무시
-            if signal["action"] == "SELL" and symbol not in portfolio.positions:
-                print(f"보유 없어서 SELL 무시: {symbol}")
-                continue
+                    # 손절/익절 자동 매도
+                    check_auto_exit(symbol, current_price, portfolio, execution)
 
-            print(f"신호 발생: {signal}")
-            log_signal(signal)
+                    signal = strategy.generate_signal(df, symbol)
 
-            if signal["action"] == "BUY":
-                bot.send_signal(signal)
+                    if not signal:
+                        print(f"신호 없음: {symbol}")
+                        continue
 
-            elif signal["action"] == "SELL":
-                # RSI 같은 전략 매도는 사용자 승인
-                bot.send_signal(signal)
+                    if signal["action"] == "BUY" and symbol in portfolio.positions:
+                        print(f"이미 보유 중이라 BUY 무시: {symbol}")
+                        continue
 
-        approval.cleanup(bot.updater.bot)
+                    if signal["action"] == "SELL" and symbol not in portfolio.positions:
+                        print(f"보유 없어서 SELL 무시: {symbol}")
+                        continue
 
-        print("다음 5분 대기...")
-        time.sleep(LOOP_INTERVAL)
+                    print(f"신호 발생: {signal}")
+                    log_signal(signal)
+
+                    bot.send_signal(signal)
+
+                except Exception as e:
+                    log_error("main.symbol_loop", f"{symbol}: {e}")
+                    print(f"{symbol} 처리 중 오류:", e)
+                    continue
+
+            approval.cleanup(bot.updater.bot)
+
+            print("다음 5분 대기...")
+            time.sleep(LOOP_INTERVAL)
+
+        except Exception as e:
+            log_error("main.loop", str(e))
+            print("메인 루프 오류:", e)
+            time.sleep(10)
 
 
 if __name__ == "__main__":

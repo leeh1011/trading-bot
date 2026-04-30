@@ -172,3 +172,6 @@ KIS 토큰 발급 성공
 계좌 동기화 완료: {'cash': 9774470.0, 'positions': {}}
 Telegram Bot 실행됨
 장중 아님 - 대기 중
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 9774470.0, 'positions': {}}
