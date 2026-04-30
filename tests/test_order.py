@@ -3,9 +3,7 @@ from utils.kis_api import KISAPI
 
 def test_order():
     api = KISAPI()
-    api.get_token()
 
-    # 매우 중요: 모의투자 테스트용 1주 시장가 매수
     result = api.place_order(
         symbol="005930",
         qty=1,
@@ -13,7 +11,8 @@ def test_order():
         price=0
     )
 
-    print(result)
+    print("ORDER IS NONE?", result is None)
+    print("ORDER RESULT:", result)
 
 
 if __name__ == "__main__":

@@ -1,4 +1,8 @@
+import time
 import requests
+import datetime
+import pandas as pd
+
 from settings import (
     KIS_APP_KEY,
     KIS_APP_SECRET,
@@ -6,17 +10,29 @@ from settings import (
     KIS_ACCOUNT,
     KIS_ACCOUNT_PRODUCT,
 )
-import time
+
 from database.db import log_error
 
-class KISAPI:
 
+class KISAPI:
     def __init__(self):
         self.access_token = None
+        self.token_expired_at = None
+        self.last_request_time = 0
+
+    def _rate_limit(self, min_interval=0.35):
+        now = time.time()
+        elapsed = now - self.last_request_time
+
+        if elapsed < min_interval:
+            time.sleep(min_interval - elapsed)
+
+        self.last_request_time = time.time()
 
     def get_token(self):
-        if self.access_token:
-            return self.access_token
+        if self.access_token and self.token_expired_at:
+            if datetime.datetime.now() < self.token_expired_at:
+                return self.access_token
 
         url = f"{KIS_URL}/oauth2/tokenP"
 
@@ -24,125 +40,182 @@ class KISAPI:
         body = {
             "grant_type": "client_credentials",
             "appkey": KIS_APP_KEY,
-            "appsecret": KIS_APP_SECRET
+            "appsecret": KIS_APP_SECRET,
         }
 
         try:
+            self._rate_limit(1.0)
+
             res = requests.post(url, headers=headers, json=body, timeout=10)
             data = res.json()
 
             if "access_token" not in data:
-                log_error("KIS.get_token", str(data))
+                log_error("KISAPI.get_token", str(data))
                 print("토큰 발급 실패:", data)
                 return None
 
             self.access_token = data["access_token"]
+
+            expired_text = data.get("access_token_token_expired")
+            if expired_text:
+                self.token_expired_at = datetime.datetime.strptime(
+                    expired_text,
+                    "%Y-%m-%d %H:%M:%S"
+                )
+            else:
+                self.token_expired_at = datetime.datetime.now() + datetime.timedelta(hours=23)
+
             print("KIS 토큰 발급 성공")
             return self.access_token
 
         except Exception as e:
-            log_error("KIS.get_token", str(e))
+            log_error("KISAPI.get_token", str(e))
             print("토큰 요청 예외:", e)
             return None
+
+    def _headers(self, tr_id):
+        token = self.get_token()
+
+        return {
+            "content-type": "application/json",
+            "authorization": f"Bearer {token}",
+            "appkey": KIS_APP_KEY,
+            "appsecret": KIS_APP_SECRET,
+            "tr_id": tr_id,
+            "custtype": "P",
+        }
+
+    def _request_with_retry(self, method, url, headers=None, params=None, json=None, retries=3):
+        for attempt in range(1, retries + 1):
+            try:
+                self._rate_limit()
+
+                if method == "GET":
+                    res = requests.get(
+                        url,
+                        headers=headers,
+                        params=params,
+                        timeout=10,
+                    )
+                elif method == "POST":
+                    res = requests.post(
+                        url,
+                        headers=headers,
+                        json=json,
+                        timeout=10,
+                    )
+                else:
+                    raise ValueError("method must be GET or POST")
+
+                data = res.json()
+
+                # 토큰 만료/인증 문제 시 1회 재발급
+                if data.get("msg_cd") in ["EGW00123", "EGW00121"]:
+                    self.access_token = None
+                    headers["authorization"] = f"Bearer {self.get_token()}"
+
+                    if method == "GET":
+                        res = requests.get(url, headers=headers, params=params, timeout=10)
+                    else:
+                        res = requests.post(url, headers=headers, json=json, timeout=10)
+
+                return res
+
+            except Exception as e:
+                log_error(
+                    "KISAPI._request_with_retry",
+                    f"attempt={attempt}, error={e}"
+                )
+                print(f"API 재시도 {attempt}/{retries}: {e}")
+                time.sleep(1)
+
+        return None
 
     def get_price(self, symbol):
         url = f"{KIS_URL}/uapi/domestic-stock/v1/quotations/inquire-price"
 
-        headers = {
-            "authorization": f"Bearer {self.access_token}",
-            "appkey": KIS_APP_KEY,
-            "appsecret": KIS_APP_SECRET,
-            "tr_id": "FHKST01010100"
-        }
+        headers = self._headers("FHKST01010100")
 
         params = {
             "fid_cond_mrkt_div_code": "J",
-            "fid_input_iscd": symbol
+            "fid_input_iscd": symbol,
         }
 
-        res = self._request_with_retry("GET", url, headers=headers, params=params)
+        res = self._request_with_retry(
+            "GET",
+            url,
+            headers=headers,
+            params=params,
+        )
 
         if res is None:
-            return {"error": "request failed"}
+            return {"error": "price request failed"}
 
         return res.json()
-    
-    def get_minute_chart(self, symbol, hour=None):
-        """
-        국내주식 당일 분봉 조회
-        기본: 현재 시각 기준 최근 분봉 데이터
-        """
-        import datetime
-        import pandas as pd
 
+    def get_minute_chart(self, symbol, hour=None):
         if hour is None:
             hour = datetime.datetime.now().strftime("%H%M%S")
 
         url = f"{KIS_URL}/uapi/domestic-stock/v1/quotations/inquire-time-itemchartprice"
 
-        headers = {
-            "authorization": f"Bearer {self.access_token}",
-            "appkey": KIS_APP_KEY,
-            "appsecret": KIS_APP_SECRET,
-            "tr_id": "FHKST03010200"
-        }
+        headers = self._headers("FHKST03010200")
 
         params = {
             "FID_ETC_CLS_CODE": "",
             "FID_COND_MRKT_DIV_CODE": "J",
             "FID_INPUT_ISCD": symbol,
             "FID_INPUT_HOUR_1": hour,
-            "FID_PW_DATA_INCU_YN": "Y"
+            "FID_PW_DATA_INCU_YN": "Y",
         }
 
-        res = self._request_with_retry("GET", url, headers=headers, params=params)
+        res = self._request_with_retry(
+            "GET",
+            url,
+            headers=headers,
+            params=params,
+        )
 
         if res is None:
+            log_error("KISAPI.get_minute_chart", f"{symbol} request failed")
             return pd.DataFrame()
 
-        data = res.json()
+        try:
+            data = res.json()
 
-        if data.get("rt_cd") != "0":
-            print("분봉 조회 실패:", data)
+            if data.get("rt_cd") != "0":
+                log_error("KISAPI.get_minute_chart", str(data))
+                print("분봉 조회 실패:", data)
+                return pd.DataFrame()
+
+            rows = data.get("output2", [])
+            candles = []
+
+            for row in rows:
+                candles.append({
+                    "time": row.get("stck_cntg_hour"),
+                    "open": float(row.get("stck_oprc", 0) or 0),
+                    "high": float(row.get("stck_hgpr", 0) or 0),
+                    "low": float(row.get("stck_lwpr", 0) or 0),
+                    "close": float(row.get("stck_prpr", 0) or 0),
+                    "volume": float(row.get("cntg_vol", 0) or 0),
+                })
+
+            df = pd.DataFrame(candles)
+
+            if df.empty:
+                return df
+
+            return df.sort_values("time").reset_index(drop=True)
+
+        except Exception as e:
+            log_error("KISAPI.get_minute_chart", str(e))
             return pd.DataFrame()
 
-        rows = data.get("output2", [])
-
-        candles = []
-        for row in rows:
-            candles.append({
-                "time": row.get("stck_cntg_hour"),
-                "open": float(row.get("stck_oprc", 0)),
-                "high": float(row.get("stck_hgpr", 0)),
-                "low": float(row.get("stck_lwpr", 0)),
-                "close": float(row.get("stck_prpr", 0)),
-                "volume": float(row.get("cntg_vol", 0)),
-            })
-
-        df = pd.DataFrame(candles)
-
-        if df.empty:
-            return df
-
-        df = df.sort_values("time").reset_index(drop=True)
-        return df
-    
     def get_balance(self):
-        """
-        국내주식 잔고 조회
-        모의투자 tr_id: VTTC8434R
-        실전투자 tr_id: TTTC8434R
-        """
         url = f"{KIS_URL}/uapi/domestic-stock/v1/trading/inquire-balance"
 
-        headers = {
-            "content-type": "application/json",
-            "authorization": f"Bearer {self.access_token}",
-            "appkey": KIS_APP_KEY,
-            "appsecret": KIS_APP_SECRET,
-            "tr_id": "VTTC8434R",
-            "custtype": "P",
-        }
+        headers = self._headers("VTTC8434R")
 
         params = {
             "CANO": KIS_ACCOUNT,
@@ -158,77 +231,47 @@ class KISAPI:
             "CTX_AREA_NK100": "",
         }
 
-        res = self._request_with_retry("GET", url, headers=headers, params=params)
+        res = self._request_with_retry(
+            "GET",
+            url,
+            headers=headers,
+            params=params,
+        )
 
         if res is None:
-            return {"error": "request failed"}
+            return {"error": "balance request failed"}
 
         return res.json()
-    
-    def place_order(self, symbol, qty, side="BUY", price=0):
-        self.get_token()
 
+    def place_order(self, symbol, qty, side="BUY", price=0):
         url = f"{KIS_URL}/uapi/domestic-stock/v1/trading/order-cash"
 
-        tr_id = "VTTC0802U" if side == "BUY" else "VTTC0801U"
+        if side == "BUY":
+            tr_id = "VTTC0802U"
+        elif side == "SELL":
+            tr_id = "VTTC0801U"
+        else:
+            return {"error": "side must be BUY or SELL"}
 
-        headers = {
-            "content-type": "application/json",
-            "authorization": f"Bearer {self.access_token}",
-            "appkey": KIS_APP_KEY,
-            "appsecret": KIS_APP_SECRET,
-            "tr_id": tr_id
-        }
+        headers = self._headers(tr_id)
 
         body = {
-            "CANO": KIS_ACCOUNT[:8],
-            "ACNT_PRDT_CD": "01",
+            "CANO": KIS_ACCOUNT,
+            "ACNT_PRDT_CD": KIS_ACCOUNT_PRODUCT,
             "PDNO": symbol,
-            "ORD_DVSN": "01",   # 시장가
-            "ORD_QTY": str(qty),
-            "ORD_UNPR": "0"
+            "ORD_DVSN": "01",
+            "ORD_QTY": str(int(qty)),
+            "ORD_UNPR": str(int(price)),
         }
 
         res = self._request_with_retry(
             "POST",
             url,
             headers=headers,
-            json=body
+            json=body,
         )
 
         if res is None:
-            return {"error": "주문 요청 실패"}
+            return {"error": "order request failed"}
 
         return res.json()
-    
-    def _request_with_retry(self, method, url, headers=None, params=None, json=None, retries=3):
-        for attempt in range(1, retries + 1):
-            try:
-                if method == "GET":
-                    res = requests.get(
-                        url,
-                        headers=headers,
-                        params=params,
-                        timeout=10
-                    )
-                elif method == "POST":
-                    res = requests.post(
-                        url,
-                        headers=headers,
-                        json=json,
-                        timeout=10
-                    )
-                else:
-                    raise ValueError("method must be GET or POST")
-
-                return res
-
-            except Exception as e:
-                log_error(
-                    "KIS.request",
-                    f"attempt={attempt}, error={e}"
-                )
-                print(f"API 재시도 {attempt}/{retries}: {e}")
-                time.sleep(1)
-
-        return None

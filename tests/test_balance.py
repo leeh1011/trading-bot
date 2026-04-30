@@ -1,14 +1,11 @@
 from utils.kis_api import KISAPI
 
+api = KISAPI()
 
-def test_balance():
-    api = KISAPI()
-    api.get_token()
+token = api.get_token()
+print("TOKEN IS NONE?", token is None)
+print("TOKEN PREVIEW:", str(token)[:20])
 
-    data = api.get_balance()
-
-    print(data)
-
-
-if __name__ == "__main__":
-    test_balance()
+balance = api.get_balance()
+print("BALANCE IS NONE?", balance is None)
+print("BALANCE:", balance)
