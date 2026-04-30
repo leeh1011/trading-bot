@@ -128,36 +128,51 @@ class TelegramBot:
 
     def pnl_handler(self, update, context):
         portfolio = self.execution_engine.portfolio
-        cash = portfolio.cash
+        kis_api = self.execution_engine.kis_api
+
+        cash = float(portfolio.cash)
         positions = portfolio.positions
 
-        total_value = cash
+        total_stock_value = 0
+        total_profit = 0
         lines = []
 
-        for code, info in positions.items():
-            qty = info["qty"]
-            avg = info["avg_price"]
+        if not positions:
+            text = f"""
+        손익 현황
 
-            # 현재는 실시간가 대신 평균단가 기준 계산
-            current_price = avg
+        현금: {cash:,.0f}원
+        보유 종목: 없음
+
+        총 자산: {cash:,.0f}원
+        """
+            update.message.reply_text(text)
+            return
+
+        for code, info in positions.items():
+            qty = int(info["qty"])
+            avg = float(info["avg_price"])
+
+            price_data = kis_api.get_price(code)
+            output = price_data.get("output", {})
+            current_price = float(output.get("stck_prpr", avg))
 
             value = qty * current_price
             profit = (current_price - avg) * qty
+            profit_rate = ((current_price - avg) / avg) * 100 if avg > 0 else 0
 
-            total_value += value
+            total_stock_value += value
+            total_profit += profit
 
             lines.append(
                 f"{code}: {qty}주\n"
-                f"평균가: {avg:,.0f}\n"
-                f"평가금액: {value:,.0f}\n"
-                f"손익: {profit:,.0f}"
+                f"평균가: {avg:,.0f}원\n"
+                f"현재가: {current_price:,.0f}원\n"
+                f"평가금액: {value:,.0f}원\n"
+                f"손익: {profit:,.0f}원 ({profit_rate:.2f}%)"
             )
 
-        pnl = total_value - 10000000
-        rate = pnl / 10000000 * 100
-
-        if not lines:
-            lines.append("보유 종목 없음")
+        total_value = cash + total_stock_value
 
         text = f"""
         손익 현황
@@ -167,9 +182,9 @@ class TelegramBot:
         보유 종목:
         {chr(10).join(lines)}
 
+        주식 평가금액: {total_stock_value:,.0f}원
+        총 평가손익: {total_profit:,.0f}원
         총 자산: {total_value:,.0f}원
-        손익: {pnl:,.0f}원
-        수익률: {rate:.2f}%
         """
 
         update.message.reply_text(text)
