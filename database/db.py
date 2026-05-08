@@ -1,11 +1,16 @@
 import sqlite3
+import os
+import pandas as pd
 from datetime import datetime
 
-DB_PATH = "trading_bot.db"
+DB_NAME = os.path.join(
+    os.path.dirname(os.path.dirname(__file__)),
+    "trading_bot.db"
+)
 
 
 def get_conn():
-    return sqlite3.connect(DB_PATH)
+    return sqlite3.connect(DB_NAME)
 
 
 def init_db():
@@ -206,6 +211,7 @@ def create_investor_flow_table(conn):
     conn.commit()
 
 def save_investor_flow(symbol, flow):
+    print("SAVING FLOW:", symbol, flow)
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
 
@@ -238,3 +244,40 @@ def save_investor_flow(symbol, flow):
 
     conn.commit()
     conn.close()
+
+def load_market_data(symbol, limit=200):
+    conn = sqlite3.connect(DB_NAME)
+
+    query = """
+    SELECT
+        datetime,
+        open,
+        high,
+        low,
+        close,
+        volume
+    FROM market_data
+    WHERE symbol = ?
+    ORDER BY id DESC
+    LIMIT ?
+    """
+
+    df = pd.read_sql_query(
+        query,
+        conn,
+        params=(symbol, limit)
+    )
+
+    conn.close()
+
+    if df.empty:
+        return df
+
+    df = df.sort_values("datetime").reset_index(drop=True)
+
+    numeric_cols = ["open", "high", "low", "close", "volume"]
+
+    for col in numeric_cols:
+        df[col] = pd.to_numeric(df[col])
+
+    return df

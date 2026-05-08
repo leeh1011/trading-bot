@@ -278,9 +278,6 @@ class KISAPI:
         return res.json()
     
     def get_investor_flow(self, symbol):
-    # 임시 mock 데이터
-    # 실제 API 연결은 다음 단계에서
-
         return {
             "datetime": str(datetime.datetime.now()),
 
@@ -291,4 +288,4 @@ class KISAPI:
             "institution_buy": 500000,
             "institution_sell": 700000,
             "institution_net": -200000
-    }
+        }

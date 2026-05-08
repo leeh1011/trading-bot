@@ -987,3 +987,217 @@ Telegram Bot 실행됨
 보유 없어서 SELL 무시: 000660
 신호 없음: 035420
 다음 5분 대기...
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+005930 처리 중 오류: name 'DB_NAME' is not defined
+000660 처리 중 오류: name 'DB_NAME' is not defined
+035420 처리 중 오류: name 'DB_NAME' is not defined
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+005930 처리 중 오류: name 'DB_NAME' is not defined
+000660 처리 중 오류: name 'DB_NAME' is not defined
+035420 처리 중 오류: name 'DB_NAME' is not defined
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+005930 처리 중 오류: name 'DB_NAME' is not defined
+000660 처리 중 오류: name 'DB_NAME' is not defined
+035420 처리 중 오류: name 'DB_NAME' is not defined
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+005930 처리 중 오류: name 'DB_NAME' is not defined
+000660 처리 중 오류: name 'DB_NAME' is not defined
+035420 처리 중 오류: name 'DB_NAME' is not defined
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+005930 처리 중 오류: name 'DB_NAME' is not defined
+000660 처리 중 오류: name 'DB_NAME' is not defined
+035420 처리 중 오류: name 'DB_NAME' is not defined
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+005930 처리 중 오류: name 'DB_NAME' is not defined
+000660 처리 중 오류: name 'DB_NAME' is not defined
+035420 처리 중 오류: name 'DB_NAME' is not defined
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+005930 처리 중 오류: name 'DB_NAME' is not defined
+000660 처리 중 오류: name 'DB_NAME' is not defined
+035420 처리 중 오류: name 'DB_NAME' is not defined
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+005930 처리 중 오류: name 'DB_NAME' is not defined
+000660 처리 중 오류: name 'DB_NAME' is not defined
+035420 처리 중 오류: name 'DB_NAME' is not defined
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+005930 처리 중 오류: name 'DB_NAME' is not defined
+000660 처리 중 오류: name 'DB_NAME' is not defined
+035420 처리 중 오류: name 'DB_NAME' is not defined
+다음 5분 대기...
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 실행됨
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 실행됨
+장중 아님 - 대기 중
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+005930 처리 중 오류: name 'flow' is not defined
+000660 처리 중 오류: name 'flow' is not defined
+035420 처리 중 오류: name 'flow' is not defined
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+005930 처리 중 오류: name 'flow' is not defined
+000660 처리 중 오류: name 'flow' is not defined
+035420 처리 중 오류: name 'flow' is not defined
+다음 5분 대기...
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+005930 처리 중 오류: name 'flow' is not defined
+000660 처리 중 오류: name 'flow' is not defined
+035420 처리 중 오류: name 'flow' is not defined
+다음 5분 대기...
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+FLOW ERROR: 005930 name 'flow' is not defined
+신호 없음: 005930
+FLOW ERROR: 000660 name 'flow' is not defined
+신호 없음: 000660
+FLOW ERROR: 035420 name 'flow' is not defined
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW ERROR: 005930 name 'flow' is not defined
+신호 없음: 005930
+FLOW ERROR: 000660 name 'flow' is not defined
+신호 없음: 000660
+FLOW ERROR: 035420 name 'flow' is not defined
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+FLOW ERROR: 005930 name 'flow' is not defined
+신호 없음: 005930
+FLOW ERROR: 000660 name 'flow' is not defined
+신호 없음: 000660
+FLOW ERROR: 035420 name 'flow' is not defined
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW ERROR: 005930 name 'flow' is not defined
+신호 없음: 005930
+FLOW ERROR: 000660 name 'flow' is not defined
+신호 없음: 000660
+FLOW ERROR: 035420 name 'flow' is not defined
+신호 없음: 035420
+다음 5분 대기...
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-08 17:01:14.040175', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+SAVING FLOW: 005930 {'datetime': '2026-05-08 17:01:14.040175', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+FLOW SAVED: 005930
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-08 17:01:15.650427', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+SAVING FLOW: 000660 {'datetime': '2026-05-08 17:01:15.650427', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+FLOW SAVED: 000660
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-08 17:01:17.256941', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+SAVING FLOW: 035420 {'datetime': '2026-05-08 17:01:17.256941', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+FLOW SAVED: 035420
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-08 17:06:18.883626', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+SAVING FLOW: 005930 {'datetime': '2026-05-08 17:06:18.883626', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+FLOW SAVED: 005930
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-08 17:06:20.516762', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+SAVING FLOW: 000660 {'datetime': '2026-05-08 17:06:20.516762', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+FLOW SAVED: 000660
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-08 17:06:22.131952', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+SAVING FLOW: 035420 {'datetime': '2026-05-08 17:06:22.131952', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+FLOW SAVED: 035420
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-08 17:11:24.239457', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+SAVING FLOW: 005930 {'datetime': '2026-05-08 17:11:24.239457', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+FLOW SAVED: 005930
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-08 17:11:25.854880', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+SAVING FLOW: 000660 {'datetime': '2026-05-08 17:11:25.854880', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+FLOW SAVED: 000660
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-08 17:11:27.507404', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+SAVING FLOW: 035420 {'datetime': '2026-05-08 17:11:27.507404', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+FLOW SAVED: 035420
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-08 17:16:29.124552', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+SAVING FLOW: 005930 {'datetime': '2026-05-08 17:16:29.124552', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+FLOW SAVED: 005930
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-08 17:16:30.746798', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+SAVING FLOW: 000660 {'datetime': '2026-05-08 17:16:30.746798', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+FLOW SAVED: 000660
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-08 17:16:32.380603', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+SAVING FLOW: 035420 {'datetime': '2026-05-08 17:16:32.380603', 'foreign_buy': 1000000, 'foreign_sell': 800000, 'foreign_net': 200000, 'institution_buy': 500000, 'institution_sell': 700000, 'institution_net': -200000}
+FLOW SAVED: 035420
+신호 없음: 035420
+다음 5분 대기...
