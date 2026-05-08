@@ -19,6 +19,11 @@ class Strategy:
 
         latest = data.iloc[-1]
 
+        print(
+            f"RSI={rsi:.2f} "
+            f"MA20={ma20:.2f}"
+        )
+
         if latest[["rsi", "ma20", "volume_avg"]].isnull().any():
             return None
 

@@ -1,13 +1,13 @@
-from database.db import init_db
 import sqlite3
 
-init_db()
-
 conn = sqlite3.connect("trading_bot.db")
-cursor = conn.cursor()
+cur = conn.cursor()
 
-cursor.execute("SELECT * FROM investor_flow LIMIT 5")
+cur.execute("SELECT COUNT(*) FROM market_data WHERE symbol='005930'")
+print(cur.fetchone())
 
-print(cursor.fetchall())
+cur.execute("SELECT COUNT(*) FROM investor_flow WHERE symbol='005930'")
+print(cur.fetchone())
 
 conn.close()
+exit()

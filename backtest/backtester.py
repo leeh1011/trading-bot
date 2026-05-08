@@ -8,10 +8,43 @@ class Backtester:
         self.trades = []
         self.equity_curve = []
 
-    def run(self, data, symbol):
-        for i in range(50, len(data)):
+    def run(self, data, symbol,investor_flow=None):
+        for i in range(14, len(data)):
             window = data.iloc[:i + 1].copy()
-            signal = self.strategy.generate_signal(window, symbol)
+           
+            flow_window = None
+            if investor_flow is not None:
+                flow_window = investor_flow.iloc[:i + 1].copy()
+
+            latest = window.iloc[-1]
+
+            rsi = latest.get("rsi")
+            ma20 = latest.get("ma20")
+            close = latest.get("close")
+            volume = latest.get("volume")
+            volume_avg = latest.get("volume_avg")
+
+            foreign_net = 0
+            institution_net = 0
+
+            if flow_window is not None and not flow_window.empty:
+                latest_flow = flow_window.iloc[-1]
+
+                foreign_net = latest_flow.get("foreign_net", 0)
+                institution_net = latest_flow.get("institution_net", 0)
+
+            print(
+                f"[{symbol}] "
+                f"RSI={rsi:.2f} "
+                f"Close={close:.2f} "
+                f"MA20={ma20:.2f} "
+                f"Vol={volume:.0f}/{volume_avg:.0f} "
+                f"Foreign={foreign_net:.0f} "
+                f"Institution={institution_net:.0f}"
+            )
+
+            signal = self.strategy.generate_signal(window, symbol, flow_window)
+                    
             price = float(window.iloc[-1]["close"])
 
             equity = self._calculate_equity(price)
@@ -21,9 +54,11 @@ class Backtester:
                 continue
 
             if signal["action"] == "BUY" and self.position is None:
+                print(f"BACKTEST BUY: {symbol} @ {price}")
                 self._buy(price)
 
             elif signal["action"] == "SELL" and self.position is not None:
+                print(f"BACKTEST SELL: {symbol} @ {price}")
                 self._sell(price)
 
         final_price = float(data.iloc[-1]["close"])

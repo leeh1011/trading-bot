@@ -10,7 +10,7 @@ from settings import (
     KIS_URL,
     KIS_ACCOUNT,
     KIS_ACCOUNT_PRODUCT,
-    KIS_REAL_URL
+    KIS_REAL_URL,
 )
 
 from database.db import log_error
