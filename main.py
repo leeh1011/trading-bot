@@ -91,11 +91,11 @@ def main():
 
     while True:
         try:
-            # if not is_market_open():
-            #     print("장중 아님 - 대기 중")
-            #     approval.cleanup(bot.updater.bot)
-            #     time.sleep(60)
-            #     continue
+            if not is_market_open():
+                print("장중 아님 - 대기 중")
+                approval.cleanup(bot.updater.bot)
+                time.sleep(60)
+                continue
 
             print("\n5분봉 시장 스캔 중...")
 

@@ -281,3 +281,48 @@ def load_market_data(symbol, limit=200):
         df[col] = pd.to_numeric(df[col])
 
     return df
+
+def load_investor_flow(symbol, limit=200):
+    conn = sqlite3.connect(DB_NAME)
+
+    query = """
+    SELECT
+        datetime,
+        foreign_buy,
+        foreign_sell,
+        foreign_net,
+        institution_buy,
+        institution_sell,
+        institution_net
+    FROM investor_flow
+    WHERE symbol = ?
+    ORDER BY id DESC
+    LIMIT ?
+    """
+
+    df = pd.read_sql_query(
+        query,
+        conn,
+        params=(symbol, limit)
+    )
+
+    conn.close()
+
+    if df.empty:
+        return df
+
+    df = df.sort_values("datetime").reset_index(drop=True)
+
+    numeric_cols = [
+        "foreign_buy",
+        "foreign_sell",
+        "foreign_net",
+        "institution_buy",
+        "institution_sell",
+        "institution_net",
+    ]
+
+    for col in numeric_cols:
+        df[col] = pd.to_numeric(df[col])
+
+    return df
