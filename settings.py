@@ -30,3 +30,9 @@ KIS_APP_SECRET = os.getenv("KIS_APP_SECRET")
 KIS_ACCOUNT = os.getenv("KIS_ACCOUNT")
 KIS_ACCOUNT_PRODUCT = os.getenv("KIS_ACCOUNT_PRODUCT", "01")
 KIS_URL = os.getenv("KIS_URL")
+
+SYMBOL_NAMES = {
+    "005930": "삼성전자",
+    "000660": "SK하이닉스",
+    "035420": "NAVER",
+}

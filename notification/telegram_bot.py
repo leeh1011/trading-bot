@@ -1,8 +1,10 @@
+import os
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CallbackQueryHandler
-from settings import TELEGRAM_TOKEN, CHAT_ID
+from settings import TELEGRAM_TOKEN, CHAT_ID, SYMBOL_NAMES
 from database.db import log_approval
 from telegram.ext import CommandHandler
+from telegram.error import BadRequest
 
 class TelegramBot:
 
@@ -21,6 +23,7 @@ class TelegramBot:
         
         dp = self.updater.dispatcher
 
+        dp.add_handler(CommandHandler("stop", self.stop_handler))
         dp.add_handler(CommandHandler("status", self.status_handler))
         dp.add_handler(CommandHandler("pnl", self.pnl_handler))
         dp.add_handler(CallbackQueryHandler(self.button_handler))
@@ -72,6 +75,14 @@ class TelegramBot:
             message_id=message.message_id
         )
 
+    def safe_edit_message(self, query, text):
+        try:
+            query.edit_message_text(text)
+        except BadRequest as e:
+            if "Message is not modified" in str(e):
+                return
+            raise
+
     def button_handler(self, update, context):
         query = update.callback_query
         data = query.data
@@ -86,11 +97,11 @@ class TelegramBot:
                 log_approval(order_id, signal["symbol"], signal["action"], "APPROVE")
                 try:
                     result = self.execution_engine.execute(signal)
-                    query.edit_message_text(f"실행됨: {result}")
+                    self.safe_edit_message(query,f"실행됨: {result}")
                 except Exception as e:
-                    query.edit_message_text(f"실행 오류: {e}")
+                    self.safe_edit_message(query,f"실행 오류: {e}")
             else:
-                query.edit_message_text("만료된 주문")
+                self.safe_edit_message(query,"만료된 주문")
 
         elif action == "reject":
             order = self.approval_manager.reject(order_id)
@@ -99,7 +110,7 @@ class TelegramBot:
                 signal = order["signal"]
                 log_approval(order_id, signal["symbol"], signal["action"], "REJECT")
 
-            query.edit_message_text("거절됨")
+            self.safe_edit_message(query, "거절됨")
 
         query.answer()
  
@@ -109,7 +120,10 @@ class TelegramBot:
 
         if positions:
             pos_text = "\n".join(
-                [f"{code}: {info['qty']}주 @ {info['avg_price']}" for code, info in positions.items()]
+                 [
+                    f"{SYMBOL_NAMES.get(code, code)}({code}): {info['qty']}주 @ {info['avg_price']:,.0f}원"
+                    for code, info in positions.items()
+                ]
             )
         else:
             pos_text = "없음"
@@ -163,9 +177,11 @@ class TelegramBot:
 
             total_stock_value += value
             total_profit += profit
+            
+            name = SYMBOL_NAMES.get(code, code)
 
             lines.append(
-                f"{code}: {qty}주\n"
+                f"{name}({code}): {qty}주\n"
                 f"평균가: {avg:,.0f}원\n"
                 f"현재가: {current_price:,.0f}원\n"
                 f"평가금액: {value:,.0f}원\n"
@@ -188,3 +204,7 @@ class TelegramBot:
         """
 
         update.message.reply_text(text)
+    
+    def stop_handler(self, update, context):
+        update.message.reply_text("봇 종료합니다.")
+        os._exit(0)

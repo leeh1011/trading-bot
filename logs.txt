@@ -175,3 +175,792 @@ Telegram Bot 실행됨
 KIS Auto Trading Bot Started
 KIS 토큰 발급 성공
 계좌 동기화 완료: {'cash': 9774470.0, 'positions': {}}
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 9774470.0, 'positions': {}}
+Telegram Bot 실행됨
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+
+5분봉 시장 스캔 중...
+보유 없어서 SELL 무시: 005930
+신호 없음: 000660
+보유 없어서 SELL 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+보유 없어서 SELL 무시: 005930
+신호 없음: 000660
+보유 없어서 SELL 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 9774470.0, 'positions': {}}
+보유 없어서 SELL 무시: 005930
+보유 없어서 SELL 무시: 000660
+보유 없어서 SELL 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+보유 없어서 SELL 무시: 005930
+보유 없어서 SELL 무시: 000660
+보유 없어서 SELL 무시: 035420
+다음 5분 대기...
+^CKIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 9774470.0, 'positions': {}}
+Telegram Bot 실행됨
+장중 아님 - 대기 중
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 9774470.0, 'positions': {}}
+Telegram Bot 실행됨
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 9774470.0, 'positions': {}}
+보유 없어서 SELL 무시: 005930
+보유 없어서 SELL 무시: 000660
+보유 없어서 SELL 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+보유 없어서 SELL 무시: 005930
+보유 없어서 SELL 무시: 000660
+보유 없어서 SELL 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 9774470.0, 'positions': {}}
+보유 없어서 SELL 무시: 005930
+보유 없어서 SELL 무시: 000660
+보유 없어서 SELL 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+보유 없어서 SELL 무시: 005930
+보유 없어서 SELL 무시: 000660
+보유 없어서 SELL 무시: 035420
+다음 5분 대기...
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 10001486.0, 'positions': {}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+신호 없음: 005930
+보유 없어서 SELL 무시: 000660
+신호 없음: 035420
+다음 5분 대기...
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 10001486.0, 'positions': {}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+신호 없음: 005930
+보유 없어서 SELL 무시: 000660
+분봉 조회 실패: {'rt_cd': '1', 'msg1': '초당 거래건수를 초과하였습니다.', 'msg_cd': 'EGW00201', 'message': 'EGW00201'}
+데이터 부족: 035420
+다음 5분 대기...
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 10001486.0, 'positions': {}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+신호 발생: {'action': 'BUY', 'symbol': '005930', 'price': 225000.0, 'reason': 'BUY: RSI=56.25, price>MA20'}
+신호 발생: {'action': 'BUY', 'symbol': '000660', 'price': 1354000.0, 'reason': 'BUY: RSI=58.00, price>MA20'}
+신호 발생: {'action': 'BUY', 'symbol': '035420', 'price': 209500.0, 'reason': 'BUY: RSI=57.14, price>MA20'}
+다음 5분 대기...
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 10001486.0, 'positions': {}}
+Telegram Bot 실행됨
+장중 아님 - 대기 중
+장중 아님 - 대기 중
+
+5분봉 시장 스캔 중...
+신호 없음: 005930
+신호 발생: {'action': 'BUY', 'symbol': '000660', 'price': 1447000.0, 'reason': 'BUY: RSI=0.00, price>MA20'}
+보유 없어서 SELL 무시: 035420
+다음 5분 대기...
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 95, in button_handler
+    query.edit_message_text("만료된 주문")
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\callbackquery.py", line 216, in edit_message_text
+    return self.message.edit_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\message.py", line 2246, in edit_text
+    return self.bot.edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 2861, in edit_message_text
+    return self._message(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\extbot.py", line 203, in _message
+    result = super()._message(
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 344, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\utils\request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\utils\request.py", line 279, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+
+5분봉 시장 스캔 중...
+신호 없음: 005930
+자동 손절 실행: {'action': 'SELL', 'symbol': '000660', 'price': 1447000.0, 'reason': '자동 손절 -8.82%'}
+자동 손절 결과: {'rt_cd': '0', 'msg_cd': '40590000', 'msg1': '모의투자 매도주문이 완료 되었습니다.', 'output': {'KRX_FWDG_ORD_ORGNO': '00950', 'ODNO': '0000003209', 'ORD_TMD': '090541'}}
+신호 발생: {'action': 'BUY', 'symbol': '000660', 'price': 1447000.0, 'reason': 'BUY: RSI=0.00, price>MA20'}
+보유 없어서 SELL 무시: 035420
+다음 5분 대기...
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 95, in button_handler
+    query.edit_message_text("만료된 주문")
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\callbackquery.py", line 216, in edit_message_text
+    return self.message.edit_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\message.py", line 2246, in edit_text
+    return self.bot.edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 2861, in edit_message_text
+    return self._message(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\extbot.py", line 203, in _message
+    result = super()._message(
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 344, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\utils\request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\utils\request.py", line 279, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 95, in button_handler
+    query.edit_message_text("만료된 주문")
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\callbackquery.py", line 216, in edit_message_text
+    return self.message.edit_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\message.py", line 2246, in edit_text
+    return self.bot.edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 2861, in edit_message_text
+    return self._message(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\extbot.py", line 203, in _message
+    result = super()._message(
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 344, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\utils\request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\utils\request.py", line 279, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 95, in button_handler
+    query.edit_message_text("만료된 주문")
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\callbackquery.py", line 216, in edit_message_text
+    return self.message.edit_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\message.py", line 2246, in edit_text
+    return self.bot.edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 2861, in edit_message_text
+    return self._message(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\extbot.py", line 203, in _message
+    result = super()._message(
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 344, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\utils\request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\utils\request.py", line 279, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 10001486.0, 'positions': {'000660': {'qty': 1, 'avg_price': 1594000.0}}}
+신호 없음: 005930
+자동 손절 실행: {'action': 'SELL', 'symbol': '000660', 'price': 1447000.0, 'reason': '자동 손절 -9.22%'}
+자동 손절 결과: {'rt_cd': '0', 'msg_cd': '40590000', 'msg1': '모의투자 매도주문이 완료 되었습니다.', 'output': {'KRX_FWDG_ORD_ORGNO': '00950', 'ODNO': '0000004854', 'ORD_TMD': '091054'}}
+신호 발생: {'action': 'BUY', 'symbol': '000660', 'price': 1447000.0, 'reason': 'BUY: RSI=0.00, price>MA20'}
+보유 없어서 SELL 무시: 035420
+다음 5분 대기...
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 10001486.0, 'positions': {}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+신호 발생: {'action': 'BUY', 'symbol': '005930', 'price': 232500.0, 'reason': 'BUY: RSI=5.45, price>MA20'}
+신호 발생: {'action': 'BUY', 'symbol': '000660', 'price': 1447000.0, 'reason': 'BUY: RSI=3.69, price>MA20'}
+신호 발생: {'action': 'BUY', 'symbol': '035420', 'price': 209000.0, 'reason': 'BUY: RSI=40.00, price>MA20'}
+다음 5분 대기...
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 100, in button_handler
+    self.edit_message_text(query,f"실행됨: {result}")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 102, in button_handler
+    self.edit_message_text(query,f"실행 오류: {e}")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 113, in button_handler
+    self.edit_message_text(query,"거절됨")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 113, in button_handler
+    self.edit_message_text(query,"거절됨")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 113, in button_handler
+    self.edit_message_text(query,"거절됨")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 100, in button_handler
+    self.edit_message_text(query,f"실행됨: {result}")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 102, in button_handler
+    self.edit_message_text(query,f"실행 오류: {e}")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 104, in button_handler
+    self.edit_message_text(query,"만료된 주문")
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TelegramBot' object has no attribute 'edit_message_text'
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\main.py", line 152, in <module>
+    main()
+  File "C:\Users\ljeno\trading-bot\main.py", line 143, in main
+    time.sleep(LOOP_INTERVAL)
+KeyboardInterrupt
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 10001486.0, 'positions': {'000660': {'qty': 1, 'avg_price': 1580000.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+신호 발생: {'action': 'BUY', 'symbol': '005930', 'price': 232500.0, 'reason': 'BUY: RSI=13.97, price>MA20'}
+자동 손절 실행: {'action': 'SELL', 'symbol': '000660', 'price': 1447000.0, 'reason': '자동 손절 -8.42%'}
+자동 손절 결과: {'rt_cd': '0', 'msg_cd': '40590000', 'msg1': '모의투자 매도주문이 완료 되었습니다.', 'output': {'KRX_FWDG_ORD_ORGNO': '00950', 'ODNO': '0000007750', 'ORD_TMD': '092447'}}
+신호 발생: {'action': 'BUY', 'symbol': '000660', 'price': 1447000.0, 'reason': 'BUY: RSI=6.33, price>MA20'}
+이미 보유 중이라 BUY 무시: 035420
+다음 5분 대기...
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 10001486.0, 'positions': {'000660': {'qty': 1, 'avg_price': 1577000.0}, '005930': {'qty': 8, 'avg_price': 260500.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+이미 보유 중이라 BUY 무시: 005930
+이미 보유 중이라 BUY 무시: 000660
+이미 보유 중이라 BUY 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+신호 없음: 005930
+신호 발생: {'action': 'SELL', 'symbol': '000660', 'price': 1583000.0, 'reason': 'SELL: RSI=70.31'}
+이미 보유 중이라 BUY 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 10001486.0, 'positions': {'005930': {'qty': 8, 'avg_price': 260500.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+이미 보유 중이라 BUY 무시: 005930
+보유 없어서 SELL 무시: 000660
+이미 보유 중이라 BUY 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+이미 보유 중이라 BUY 무시: 005930
+보유 없어서 SELL 무시: 000660
+이미 보유 중이라 BUY 무시: 035420
+다음 5분 대기...
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 8, 'avg_price': 260500.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+이미 보유 중이라 BUY 무시: 005930
+신호 발생: {'action': 'BUY', 'symbol': '000660', 'price': 1632000.0, 'reason': 'BUY: RSI=54.55, price>MA20'}
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+신호 발생: {'action': 'SELL', 'symbol': '005930', 'price': 264500.0, 'reason': 'SELL: RSI=72.22'}
+보유 없어서 SELL 무시: 000660
+이미 보유 중이라 BUY 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'035420': {'qty': 9, 'avg_price': 209055.555}}}
+신호 발생: {'action': 'BUY', 'symbol': '005930', 'price': 264000.0, 'reason': 'BUY: RSI=55.00, price>MA20'}
+신호 없음: 000660
+이미 보유 중이라 BUY 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+이미 보유 중이라 BUY 무시: 005930
+신호 없음: 000660
+이미 보유 중이라 BUY 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+이미 보유 중이라 BUY 무시: 005930
+신호 없음: 000660
+이미 보유 중이라 BUY 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+이미 보유 중이라 BUY 무시: 005930
+신호 발생: {'action': 'BUY', 'symbol': '000660', 'price': 1640000.0, 'reason': 'BUY: RSI=57.14, price>MA20'}
+이미 보유 중이라 BUY 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+이미 보유 중이라 BUY 무시: 005930
+신호 발생: {'action': 'BUY', 'symbol': '000660', 'price': 1640000.0, 'reason': 'BUY: RSI=43.75, price>MA20'}
+이미 보유 중이라 BUY 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+이미 보유 중이라 BUY 무시: 005930
+신호 발생: {'action': 'BUY', 'symbol': '000660', 'price': 1637000.0, 'reason': 'BUY: RSI=35.29, price>MA20'}
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+이미 보유 중이라 BUY 무시: 005930
+신호 발생: {'action': 'BUY', 'symbol': '000660', 'price': 1637000.0, 'reason': 'BUY: RSI=35.71, price>MA20'}
+이미 보유 중이라 BUY 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+이미 보유 중이라 BUY 무시: 005930
+신호 발생: {'action': 'BUY', 'symbol': '000660', 'price': 1637500.0, 'reason': 'BUY: RSI=48.57, price>MA20'}
+이미 보유 중이라 BUY 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+이미 보유 중이라 BUY 무시: 005930
+신호 발생: {'action': 'BUY', 'symbol': '000660', 'price': 1639000.0, 'reason': 'BUY: RSI=52.50, price>MA20'}
+이미 보유 중이라 BUY 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+신호 없음: 005930
+신호 발생: {'action': 'BUY', 'symbol': '000660', 'price': 1637000.0, 'reason': 'BUY: RSI=43.33, price>MA20'}
+중복/쿨다운으로 신호 무시: 000660
+이미 보유 중이라 BUY 무시: 035420
+만료됨: 027e711b-eb73-43a0-86d8-ee63a668a252
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+이미 보유 중이라 BUY 무시: 005930
+신호 발생: {'action': 'BUY', 'symbol': '000660', 'price': 1635000.0, 'reason': 'BUY: RSI=30.77, price>MA20'}
+이미 보유 중이라 BUY 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+이미 보유 중이라 BUY 무시: 005930
+신호 발생: {'action': 'BUY', 'symbol': '000660', 'price': 1632000.0, 'reason': 'BUY: RSI=18.18, price>MA20'}
+중복/쿨다운으로 신호 무시: 000660
+이미 보유 중이라 BUY 무시: 035420
+만료됨: 90a430ed-19e1-4b85-9dc6-b32f3316413d
+다음 5분 대기...

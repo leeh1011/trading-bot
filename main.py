@@ -1,7 +1,7 @@
 import time
 from datetime import datetime
 
-from settings import SYMBOLS, LOOP_INTERVAL, RISK
+from settings import SYMBOLS, LOOP_INTERVAL, RISK, TRADE_RATIO
 from utils.kis_api import KISAPI
 from core.strategy import Strategy
 from core.portfolio import Portfolio
@@ -100,7 +100,7 @@ def main():
 
             for symbol in SYMBOLS:
                 try:
-                    time.sleep(0.5)  # KIS 초당 요청 제한 완화
+                    time.sleep(1.2)  # KIS 초당 요청 제한 완화
 
                     df = api.get_minute_chart(symbol)
 
@@ -126,6 +126,16 @@ def main():
                     if signal["action"] == "SELL" and symbol not in portfolio.positions:
                         print(f"보유 없어서 SELL 무시: {symbol}")
                         continue
+
+                    if signal["action"] == "BUY":
+                        cash = float(portfolio.cash)
+                        amount = cash * TRADE_RATIO
+                        price = float(signal["price"])
+                        qty = int(amount // price)
+
+                        if qty <= 0:
+                            print(f"매수 가능 수량 없음 - BUY 알림 차단: {symbol}")
+                            continue
 
                     print(f"신호 발생: {signal}")
                     log_signal(signal)
