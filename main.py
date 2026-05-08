@@ -13,7 +13,8 @@ from database.db import (
     log_signal,
     log_error,
     save_market_data,
-    save_investor_flow
+    save_investor_flow,
+    load_investor_flow
 )
 
 
@@ -131,7 +132,8 @@ def main():
                     # 손절/익절 자동 매도
                     check_auto_exit(symbol, current_price, portfolio, execution)
 
-                    signal = strategy.generate_signal(df, symbol)
+                    flow_df = load_investor_flow(symbol, limit=20)
+                    signal = strategy.generate_signal(df, symbol, flow_df)
 
                     if not signal:
                         print(f"신호 없음: {symbol}")

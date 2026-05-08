@@ -7,7 +7,7 @@ class Strategy:
         self.rsi_sell_threshold = 70
         self.volume_window = 20
 
-    def generate_signal(self, data, symbol):
+    def generate_signal(self, data, symbol, investor_flow=None):
         if data is None or len(data) < 30:
             return None
 
@@ -27,19 +27,33 @@ class Strategy:
         ma20 = float(latest["ma20"])
         volume = float(latest["volume"])
         volume_avg = float(latest["volume_avg"])
-        foreign_net=float(latest["foreign_net"])
-        institution_net=float(latest["institution_net"])
+
+        foreign_net = 0
+        institution_net = 0
+
+        if investor_flow is not None and not investor_flow.empty:
+            latest_flow = investor_flow.iloc[-1]
+            foreign_net = float(latest_flow.get("foreign_net", 0))
+            institution_net = float(latest_flow.get("institution_net", 0))
+
+        investor_buy_filter = (
+            foreign_net > 0 or institution_net > 0
+        )
+
+        investor_sell_warning = (
+            foreign_net < 0 and institution_net < 0
+        )
 
         buy_condition = (
             rsi < self.rsi_buy_threshold
             and price > ma20
             and volume > volume_avg
-            and (foreign_net>0
-            or institution_net>0)
+            and investor_buy_filter
         )
 
         sell_condition = (
             rsi > self.rsi_sell_threshold
+            or investor_sell_warning
         )
 
         if buy_condition:
@@ -49,7 +63,9 @@ class Strategy:
                 "price": price,
                 "reason": (
                     f"BUY: RSI={rsi:.2f}, price>MA20, "
-                    f"volume>{self.volume_window}avg"
+                    f"volume>{self.volume_window}avg, "
+                    f"foreign_net={foreign_net:.0f}, "
+                    f"institution_net={institution_net:.0f}"
                 )
             }
 
@@ -58,7 +74,11 @@ class Strategy:
                 "action": "SELL",
                 "symbol": symbol,
                 "price": price,
-                "reason": f"SELL: RSI={rsi:.2f}"
+                "reason": (
+                    f"SELL: RSI={rsi:.2f}, "
+                    f"foreign_net={foreign_net:.0f}, "
+                    f"institution_net={institution_net:.0f}"
+                )
             }
 
         return None
