@@ -2,6 +2,7 @@ import time
 import requests
 import datetime
 import pandas as pd
+import datetime
 
 from settings import (
     KIS_APP_KEY,
@@ -275,3 +276,19 @@ class KISAPI:
             return {"error": "order request failed"}
 
         return res.json()
+    
+    def get_investor_flow(self, symbol):
+    # 임시 mock 데이터
+    # 실제 API 연결은 다음 단계에서
+
+        return {
+            "datetime": str(datetime.datetime.now()),
+
+            "foreign_buy": 1000000,
+            "foreign_sell": 800000,
+            "foreign_net": 200000,
+
+            "institution_buy": 500000,
+            "institution_sell": 700000,
+            "institution_net": -200000
+    }

@@ -12,7 +12,8 @@ from database.db import (
     init_db,
     log_signal,
     log_error,
-    save_market_data
+    save_market_data,
+    save_investor_flow
 )
 
 
@@ -108,6 +109,9 @@ def main():
                     time.sleep(1.2)  # KIS 초당 요청 제한 완화
 
                     df = api.get_minute_chart(symbol)
+
+                    flow = api.get_investor_flow(symbol)
+                    save_investor_flow(symbol, flow)
 
                     if df.empty or len(df) < 20:
                         print(f"데이터 부족: {symbol}")

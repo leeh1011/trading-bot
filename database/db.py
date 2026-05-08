@@ -13,6 +13,7 @@ def init_db():
     cur = conn.cursor()
 
     create_market_data_table(conn)
+    create_investor_flow_table(conn)
 
     cur.execute("""
     CREATE TABLE IF NOT EXISTS signals (
@@ -178,6 +179,61 @@ def save_market_data(symbol, row):
         float(row["low"]),
         float(row["close"]),
         float(row["volume"])
+    ))
+
+    conn.commit()
+    conn.close()
+
+def create_investor_flow_table(conn):
+    cursor = conn.cursor()
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS investor_flow (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        symbol TEXT,
+        datetime TEXT,
+
+        foreign_buy REAL,
+        foreign_sell REAL,
+        foreign_net REAL,
+
+        institution_buy REAL,
+        institution_sell REAL,
+        institution_net REAL
+    )
+    """)
+
+    conn.commit()
+
+def save_investor_flow(symbol, flow):
+    conn = sqlite3.connect(DB_NAME)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+    INSERT INTO investor_flow (
+        symbol,
+        datetime,
+
+        foreign_buy,
+        foreign_sell,
+        foreign_net,
+
+        institution_buy,
+        institution_sell,
+        institution_net
+    )
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    """, (
+        symbol,
+        flow["datetime"],
+
+        flow["foreign_buy"],
+        flow["foreign_sell"],
+        flow["foreign_net"],
+
+        flow["institution_buy"],
+        flow["institution_sell"],
+        flow["institution_net"]
     ))
 
     conn.commit()
