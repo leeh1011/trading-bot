@@ -12,6 +12,8 @@ def init_db():
     conn = get_conn()
     cur = conn.cursor()
 
+    create_market_data_table(conn)
+
     cur.execute("""
     CREATE TABLE IF NOT EXISTS signals (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -130,6 +132,52 @@ def log_error(location, message):
         datetime.now().isoformat(),
         location,
         message,
+    ))
+
+    conn.commit()
+    conn.close()
+
+def create_market_data_table(conn):
+    cursor = conn.cursor()
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS market_data (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        symbol TEXT,
+        datetime TEXT,
+        open REAL,
+        high REAL,
+        low REAL,
+        close REAL,
+        volume REAL
+    )
+    """)
+
+    conn.commit()
+
+def save_market_data(symbol, row):
+    conn = sqlite3.connect(DB_NAME)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+    INSERT INTO market_data (
+        symbol,
+        datetime,
+        open,
+        high,
+        low,
+        close,
+        volume
+    )
+    VALUES (?, ?, ?, ?, ?, ?, ?)
+    """, (
+        symbol,
+        str(row.name),
+        float(row["open"]),
+        float(row["high"]),
+        float(row["low"]),
+        float(row["close"]),
+        float(row["volume"])
     ))
 
     conn.commit()

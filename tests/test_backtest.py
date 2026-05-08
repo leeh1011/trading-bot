@@ -32,9 +32,13 @@ def test_backtest():
     result = backtester.run(data, "005930")
 
     print("초기 자본:", result["initial_cash"])
-    print("최종 자본:", result["final_cash"])
-    print("수익률:", round(result["total_return"] * 100, 2), "%")
-    print("거래 횟수:", result["trade_count"])
+    print("최종 자본:", round(result["final_cash"], 2))
+    print("총 수익률:", round(result["total_return"] * 100, 2), "%")
+    print("완료 거래 수:", result["completed_trades"])
+    print("승률:", round(result["win_rate"] * 100, 2), "%")
+    print("MDD:", round(result["mdd"] * 100, 2), "%")
+    print("평균 수익:", round(result["avg_win"] * 100, 2), "%")
+    print("평균 손실:", round(result["avg_loss"] * 100, 2), "%")
 
     print("\n거래 내역:")
     for trade in result["trades"]:

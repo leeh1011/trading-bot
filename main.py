@@ -8,7 +8,12 @@ from core.portfolio import Portfolio
 from core.execution import ExecutionEngine
 from notification.approval_manager import ApprovalManager
 from notification.telegram_bot import TelegramBot
-from database.db import init_db, log_signal, log_error
+from database.db import (
+    init_db,
+    log_signal,
+    log_error,
+    save_market_data
+)
 
 
 def is_market_open():
@@ -107,6 +112,9 @@ def main():
                     if df.empty or len(df) < 20:
                         print(f"데이터 부족: {symbol}")
                         continue
+
+                    latest_row=df.iloc[-1]
+                    save_market_data(symbol,latest_row)
 
                     current_price = float(df.iloc[-1]["close"])
 
