@@ -27,11 +27,15 @@ class Strategy:
         ma20 = float(latest["ma20"])
         volume = float(latest["volume"])
         volume_avg = float(latest["volume_avg"])
+        foreign_net=float(latest["foreign_net"])
+        institution_net=float(latest["institution_net"])
 
         buy_condition = (
             rsi < self.rsi_buy_threshold
             and price > ma20
             and volume > volume_avg
+            and (foreign_net>0
+            or institution_net>0)
         )
 
         sell_condition = (

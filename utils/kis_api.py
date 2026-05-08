@@ -10,6 +10,7 @@ from settings import (
     KIS_URL,
     KIS_ACCOUNT,
     KIS_ACCOUNT_PRODUCT,
+    KIS_REAL_URL
 )
 
 from database.db import log_error
@@ -278,14 +279,56 @@ class KISAPI:
         return res.json()
     
     def get_investor_flow(self, symbol):
-        return {
-            "datetime": str(datetime.datetime.now()),
+        url = f"{KIS_REAL_URL}/uapi/domestic-stock/v1/quotations/investor-trend-estimate"
 
-            "foreign_buy": 1000000,
-            "foreign_sell": 800000,
-            "foreign_net": 200000,
+        headers = self._headers("HHPTJ04160200")
 
-            "institution_buy": 500000,
-            "institution_sell": 700000,
-            "institution_net": -200000
+        params = {
+            "MKSC_SHRN_ISCD": symbol
         }
+
+        res = self._request_with_retry(
+            "GET",
+            url,
+            headers=headers,
+            params=params,
+        )
+
+        if res is None:
+            return None
+
+        try:
+            data = res.json()
+
+            if data.get("rt_cd") != "0":
+                log_error("KISAPI.get_investor_flow", str(data))
+                print("외인/기관 조회 실패:", data)
+                return None
+
+            rows = data.get("output2", [])
+
+            if not rows:
+                return None
+
+            latest = rows[0]
+
+            foreign_net = int(latest.get("frgn_fake_ntby_qty", 0) or 0)
+            institution_net = int(latest.get("orgn_fake_ntby_qty", 0) or 0)
+
+            return {
+                "datetime": str(datetime.datetime.now()),
+
+                # 이 API는 순매수 추정 수량만 제공
+                "foreign_buy": 0,
+                "foreign_sell": 0,
+                "foreign_net": foreign_net,
+
+                "institution_buy": 0,
+                "institution_sell": 0,
+                "institution_net": institution_net,
+            }
+
+        except Exception as e:
+            log_error("KISAPI.get_investor_flow", str(e))
+            print("외인/기관 파싱 오류:", e)
+            return None

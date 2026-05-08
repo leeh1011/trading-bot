@@ -91,11 +91,11 @@ def main():
 
     while True:
         try:
-            if not is_market_open():
-                print("장중 아님 - 대기 중")
-                approval.cleanup(bot.updater.bot)
-                time.sleep(60)
-                continue
+            # if not is_market_open():
+            #     print("장중 아님 - 대기 중")
+            #     approval.cleanup(bot.updater.bot)
+            #     time.sleep(60)
+            #     continue
 
             print("\n5분봉 시장 스캔 중...")
 
@@ -106,22 +106,18 @@ def main():
 
             for symbol in SYMBOLS:
                 try:
-                    time.sleep(1.2)  # KIS 초당 요청 제한 완화
+                    time.sleep(2.0)  # KIS 초당 요청 제한 완화
 
                     df = api.get_minute_chart(symbol)
 
-                    # flow = api.get_investor_flow(symbol)
+                    flow = api.get_investor_flow(symbol)
 
-                    # save_investor_flow(symbol, flow)
-                    try:
-                        flow = api.get_investor_flow(symbol)
+                    if flow is not None:
                         print("FLOW FETCHED:", symbol, flow)
                         save_investor_flow(symbol, flow)
                         print("FLOW SAVED:", symbol)
-
-                    except Exception as flow_error:
-                        print("FLOW ERROR:", symbol, flow_error)
-                        log_error("main.investor_flow", f"{symbol}: {flow_error}")
+                    else:
+                        print(f"외인/기관 데이터 없음: {symbol}")
 
                     if df.empty or len(df) < 20:
                         print(f"데이터 부족: {symbol}")

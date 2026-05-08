@@ -1201,3 +1201,125 @@ SAVING FLOW: 035420 {'datetime': '2026-05-08 17:16:32.380603', 'foreign_buy': 10
 FLOW SAVED: 035420
 신호 없음: 035420
 다음 5분 대기...
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 실행됨
+장중 아님 - 대기 중
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 실행됨
+장중 아님 - 대기 중
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\main.py", line 180, in <module>
+    main()
+  File "C:\Users\ljeno\trading-bot\main.py", line 97, in main
+    time.sleep(60)
+KeyboardInterrupt
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+외인/기관 조회 실패: {'rt_cd': '2', 'msg_cd': 'OPSQ2001', 'msg1': 'ERROR INPUT FIELD NOT FOUND [FID_COND_SCR_DIV_CODE]'}
+외인/기관 데이터 없음: 005930
+신호 없음: 005930
+외인/기관 조회 실패: {'rt_cd': '2', 'msg_cd': 'OPSQ2001', 'msg1': 'ERROR INPUT FIELD NOT FOUND [FID_COND_SCR_DIV_CODE]'}
+외인/기관 데이터 없음: 000660
+신호 없음: 000660
+외인/기관 조회 실패: {'rt_cd': '1', 'msg1': '초당 거래건수를 초과하였습니다.', 'msg_cd': 'EGW00201', 'message': 'EGW00201'}
+외인/기관 데이터 없음: 035420
+신호 없음: 035420
+다음 5분 대기...
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\main.py", line 180, in <module>
+    main()
+  File "C:\Users\ljeno\trading-bot\main.py", line 171, in main
+    time.sleep(LOOP_INTERVAL)
+KeyboardInterrupt
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+외인/기관 조회 실패: {'rt_cd': '2', 'msg_cd': 'OPSQ2001', 'msg1': 'ERROR INPUT FIELD NOT FOUND [FID_COND_SCR_DIV_CODE]'}
+외인/기관 데이터 없음: 005930
+신호 없음: 005930
+외인/기관 조회 실패: {'rt_cd': '2', 'msg_cd': 'OPSQ2001', 'msg1': 'ERROR INPUT FIELD NOT FOUND [FID_COND_SCR_DIV_CODE]'}
+외인/기관 데이터 없음: 000660
+신호 없음: 000660
+외인/기관 조회 실패: {'rt_cd': '1', 'msg1': '초당 거래건수를 초과하였습니다.', 'msg_cd': 'EGW00201', 'message': 'EGW00201'}
+외인/기관 데이터 없음: 035420
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+외인/기관 조회 실패: {'rt_cd': '2', 'msg_cd': 'OPSQ2001', 'msg1': 'ERROR INPUT FIELD NOT FOUND [FID_COND_SCR_DIV_CODE]'}
+외인/기관 데이터 없음: 005930
+신호 없음: 005930
+외인/기관 조회 실패: {'rt_cd': '2', 'msg_cd': 'OPSQ2001', 'msg1': 'ERROR INPUT FIELD NOT FOUND [FID_COND_SCR_DIV_CODE]'}
+외인/기관 데이터 없음: 000660
+신호 없음: 000660
+외인/기관 조회 실패: {'rt_cd': '2', 'msg_cd': 'OPSQ2001', 'msg1': 'ERROR INPUT FIELD NOT FOUND [FID_COND_SCR_DIV_CODE]'}
+외인/기관 데이터 없음: 035420
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+외인/기관 조회 실패: {'rt_cd': '2', 'msg_cd': 'OPSQ2001', 'msg1': 'ERROR INPUT FIELD NOT FOUND [FID_COND_SCR_DIV_CODE]'}
+외인/기관 데이터 없음: 005930
+신호 없음: 005930
+외인/기관 조회 실패: {'rt_cd': '2', 'msg_cd': 'OPSQ2001', 'msg1': 'ERROR INPUT FIELD NOT FOUND [FID_COND_SCR_DIV_CODE]'}
+외인/기관 데이터 없음: 000660
+신호 없음: 000660
+외인/기관 조회 실패: {'rt_cd': '2', 'msg_cd': 'OPSQ2001', 'msg1': 'ERROR INPUT FIELD NOT FOUND [FID_COND_SCR_DIV_CODE]'}
+외인/기관 데이터 없음: 035420
+신호 없음: 035420
+다음 5분 대기...
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\main.py", line 5, in <module>
+    from utils.kis_api import KISAPI
+  File "C:\Users\ljeno\trading-bot\utils\kis_api.py", line 7, in <module>
+    from settings import (
+ImportError: cannot import name 'KIS_REAL_URL' from 'settings' (C:\Users\ljeno\trading-bot\settings.py)
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\main.py", line 5, in <module>
+    from utils.kis_api import KISAPI
+  File "C:\Users\ljeno\trading-bot\utils\kis_api.py", line 7, in <module>
+    from settings import (
+ImportError: cannot import name 'KIS_REAL_URL' from 'settings' (C:\Users\ljeno\trading-bot\settings.py)
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\main.py", line 5, in <module>
+    from utils.kis_api import KISAPI
+  File "C:\Users\ljeno\trading-bot\utils\kis_api.py", line 7, in <module>
+    from settings import (
+ImportError: cannot import name 'KIS_REAL_URL' from 'settings' (C:\Users\ljeno\trading-bot\settings.py)
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\main.py", line 5, in <module>
+    from utils.kis_api import KISAPI
+  File "C:\Users\ljeno\trading-bot\utils\kis_api.py", line 7, in <module>
+    from settings import (
+ImportError: cannot import name 'KIS_REAL_URL' from 'settings' (C:\Users\ljeno\trading-bot\settings.py)
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-08 19:45:38.304336', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5956000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 236000}
+SAVING FLOW: 005930 {'datetime': '2026-05-08 19:45:38.304336', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5956000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 236000}
+FLOW SAVED: 005930
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-08 19:45:41.150001', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -806000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 77000}
+SAVING FLOW: 000660 {'datetime': '2026-05-08 19:45:41.150001', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -806000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 77000}
+FLOW SAVED: 000660
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-08 19:45:44.428431', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': 331000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 69000}
+SAVING FLOW: 035420 {'datetime': '2026-05-08 19:45:44.428431', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': 331000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 69000}
+FLOW SAVED: 035420
+신호 없음: 035420
+다음 5분 대기...
