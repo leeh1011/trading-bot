@@ -3,7 +3,7 @@ from utils.indicators import calculate_rsi, moving_average
 
 class Strategy:
     def __init__(self):
-        self.rsi_buy_threshold = 50
+        self.rsi_buy_threshold = 45
         self.rsi_sell_threshold = 70
         self.volume_window = 20
 
@@ -29,9 +29,9 @@ class Strategy:
         volume_avg = float(latest["volume_avg"])
 
         buy_condition = (
-            # rsi < self.rsi_buy_threshold
-            # and price > ma20
-            rsi<60
+            rsi < self.rsi_buy_threshold
+            and price > ma20
+            and volume > volume_avg
         )
 
         sell_condition = (
@@ -43,7 +43,10 @@ class Strategy:
                 "action": "BUY",
                 "symbol": symbol,
                 "price": price,
-                "reason": f"BUY: RSI={rsi:.2f}, price>MA20"
+                "reason": (
+                    f"BUY: RSI={rsi:.2f}, price>MA20, "
+                    f"volume>{self.volume_window}avg"
+                )
             }
 
         if sell_condition:
