@@ -1,359 +1,235 @@
+import  matplotlib.pyplot as plt
+
 class Backtester:
-    def __init__(
-        self,
-        strategy,
-        initial_cash=1_000_000,
-        trade_ratio=0.2,
-        fee_rate=0.00015,
-        slippage_rate=0.0005,
-        stop_loss_rate=None,
-        take_profit_rate=None,
-        max_hold_bars=None,
-    ):
+    def __init__(self, strategy, initial_cash=1_000_000, trade_ratio=0.2):
         self.strategy = strategy
         self.initial_cash = initial_cash
+        self.cash = initial_cash
         self.trade_ratio = trade_ratio
-
-        # 거래 비용
-        self.fee_rate = fee_rate
-        self.slippage_rate = slippage_rate
-
-        # 선택 옵션
-        self.stop_loss_rate = stop_loss_rate
-        self.take_profit_rate = take_profit_rate
-        self.max_hold_bars = max_hold_bars
-
-        self.reset()
-
-    def reset(self):
-        self.cash = self.initial_cash
         self.position = None
         self.trades = []
         self.equity_curve = []
-        self.signal_logs = []
 
     def run(self, data, symbol, investor_flow=None):
-        self.reset()
-
-        if data is None or data.empty:
-            return self._result(symbol)
-
-        data = data.copy()
-
-        # strategy.py에서 최소 30개 미만이면 None 반환하므로 30부터 시작
-        start_index = 30
-
-        for i in range(start_index, len(data)):
+        for i in range(50, len(data)):
             window = data.iloc[:i + 1].copy()
 
             flow_window = None
-            if investor_flow is not None and not investor_flow.empty:
+            if investor_flow is not None:
                 flow_window = investor_flow.iloc[:i + 1].copy()
 
-            current_bar = window.iloc[-1]
-            price = float(current_bar["close"])
+            latest = window.iloc[-1]
+            close = float(latest.get("close"))
 
-            # 1. 현재 평가금액 기록
-            equity = self._calculate_equity(price)
-            self.equity_curve.append(equity)
-
-            # 2. 보유 중이면 손절/익절/최대보유기간 체크
-            exit_signal = self._check_exit_conditions(price, i)
-
-            if exit_signal is not None and self.position is not None:
-                print(f"BACKTEST {exit_signal}: {symbol} @ {price:.0f}")
-                self._sell(price, i, reason=exit_signal)
+            if close is None:
                 continue
 
-            # 3. 전략 신호 생성
-            signal = self.strategy.generate_signal(window, symbol, flow_window)
-
-            if signal is None:
-                continue
-
-            action = signal.get("action")
-            score = signal.get("score", 0)
-            reason = signal.get("reason", "")
-            reasons = signal.get("reasons", [])
-
-            # 4. 신호 로그 저장
-            signal_log = {
-                "index": i,
-                "symbol": symbol,
-                "action": action,
-                "price": price,
-                "score": score,
-                "reason": reason,
-                "reasons": reasons,
-                "rsi": signal.get("rsi"),
-                "ma20": signal.get("ma20"),
-                "volume": signal.get("volume"),
-                "volume_avg": signal.get("volume_avg"),
-                "foreign_net": signal.get("foreign_net"),
-                "institution_net": signal.get("institution_net"),
-            }
-
-            # BUY/WATCH 신호 이후 n봉 뒤 수익률 분석용
-            signal_log.update(self._forward_returns(data, i, price))
-
-            self.signal_logs.append(signal_log)
-
-            print(
-                f"[BACKTEST SIGNAL] {symbol} "
-                f"action={action}, score={score}, price={price:.0f}, "
-                f"reason={reason}"
+            signal = self.strategy.generate_signal(
+                window,
+                symbol=symbol,
+                investor_flow=flow_window
             )
 
-            # 5. 실제 매매 처리
+            action = "HOLD"
+            reason = ""
+
+            if signal is not None:
+                action = signal.get("action", "HOLD")
+                reason = signal.get("reason", "")
+
+            position_value = 0
+            if self.position is not None:
+                position_value = self.position["quantity"] * close
+
+            total_value = self.cash + position_value
+
+            if action == "BUY" and self.position is not None:
+                action = "HOLD"
+                reason = "이미 보유 중이라 추가 매수 안 함"
+
+            if action == "SELL" and self.position is None:
+                action = "HOLD"
+                reason = "보유 수량이 없어 매도 안 함"
+
+            self.equity_curve.append({
+                "time": latest.name,
+                "symbol": symbol,
+                "close": close,
+                "cash": self.cash,
+                "position_value": position_value,
+                "total_value": total_value,
+                "action": action,
+                "reason": reason
+            })
+
+            # 매수
             if action == "BUY" and self.position is None:
-                print(f"BACKTEST BUY: {symbol} @ {price:.0f}")
-                self._buy(price, i, reason=reason)
+                buy_amount = self.cash * self.trade_ratio
+                quantity = int(buy_amount // close)
 
+                if quantity <= 0:
+                    continue
+
+                cost = quantity * close
+                self.cash -= cost
+
+                self.position = {
+                    "symbol": symbol,
+                    "entry_price": close,
+                    "quantity": quantity,
+                    "entry_time": latest.name,
+                    "entry_reason": reason
+                }
+
+                self.trades.append({
+                    "type": "BUY",
+                    "time": latest.name,
+                    "symbol": symbol,
+                    "price": close,
+                    "quantity": quantity,
+                    "amount": cost,
+                    "reason": reason,
+                    "cash_after": self.cash
+                })
+
+            # 매도
             elif action == "SELL" and self.position is not None:
-                print(f"BACKTEST SELL: {symbol} @ {price:.0f}")
-                self._sell(price, i, reason=reason)
+                quantity = self.position["quantity"]
+                entry_price = self.position["entry_price"]
+                entry_time = self.position["entry_time"]
 
-            # WATCH는 매매하지 않고 신호 로그만 남김
-            elif action == "WATCH":
-                pass
+                sell_amount = quantity * close
+                self.cash += sell_amount
 
-        # 마지막 봉에서 보유 중이면 강제 청산
-        final_price = float(data.iloc[-1]["close"])
+                profit = (close - entry_price) * quantity
+                profit_rate = ((close - entry_price) / entry_price) * 100
 
+                self.trades.append({
+                    "type": "SELL",
+                    "time": latest.name,
+                    "symbol": symbol,
+                    "price": close,
+                    "quantity": quantity,
+                    "amount": sell_amount,
+                    "entry_time": entry_time,
+                    "entry_price": entry_price,
+                    "profit": profit,
+                    "profit_rate": profit_rate,
+                    "buy_reason": self.position["entry_reason"],
+                    "sell_reason": reason,
+                    "cash_after": self.cash
+                })
+
+                self.position = None
+
+        # 마지막까지 보유 중이면 마지막 종가로 강제 청산
         if self.position is not None:
-            self._sell(final_price, len(data) - 1, reason="FINAL_EXIT")
+            last = data.iloc[-1]
+            close = last.get("close")
 
-        return self._result(symbol)
+            quantity = self.position["quantity"]
+            entry_price = self.position["entry_price"]
 
-    def _buy(self, price, index, reason=""):
-        # 슬리피지 반영: 매수는 조금 비싸게 산다고 가정
-        buy_price = price * (1 + self.slippage_rate)
+            sell_amount = quantity * close
+            self.cash += sell_amount
 
-        amount = self.cash * self.trade_ratio
-        qty = int(amount // buy_price)
+            profit = (close - entry_price) * quantity
+            profit_rate = ((close - entry_price) / entry_price) * 100
 
-        if qty <= 0:
-            return
+            self.trades.append({
+                "type": "FORCED_SELL",
+                "time": last.name,
+                "symbol": symbol,
+                "price": close,
+                "quantity": quantity,
+                "amount": sell_amount,
+                "entry_price": entry_price,
+                "profit": profit,
+                "profit_rate": profit_rate,
+                "buy_reason": self.position["entry_reason"],
+                "sell_reason": "백테스트 종료로 강제 청산",
+                "cash_after": self.cash
+            })
 
-        trade_value = qty * buy_price
-        fee = trade_value * self.fee_rate
+            self.position = None
 
-        total_cost = trade_value + fee
+        return self.result()
 
-        if total_cost > self.cash:
-            return
+    def result(self):
+        final_value = self.cash
+        total_return = ((final_value - self.initial_cash) / self.initial_cash) * 100
 
-        self.cash -= total_cost
+        sell_trades = [
+            trade for trade in self.trades
+            if trade["type"] in ["SELL", "FORCED_SELL"]
+        ]
 
-        self.position = {
-            "qty": qty,
-            "avg_price": buy_price,
-            "entry_index": index,
-            "entry_reason": reason,
-        }
+        win_trades = [
+            trade for trade in sell_trades
+            if trade.get("profit", 0) > 0
+        ]
 
-        self.trades.append({
-            "type": "BUY",
-            "index": index,
-            "price": buy_price,
-            "qty": qty,
-            "trade_value": trade_value,
-            "fee": fee,
-            "cash": self.cash,
-            "reason": reason,
-        })
+        win_rate = 0
+        if len(sell_trades) > 0:
+            win_rate = len(win_trades) / len(sell_trades) * 100
 
-    def _sell(self, price, index, reason=""):
-        if self.position is None:
-            return
-
-        # 슬리피지 반영: 매도는 조금 싸게 판다고 가정
-        sell_price = price * (1 - self.slippage_rate)
-
-        qty = self.position["qty"]
-        avg_price = self.position["avg_price"]
-        entry_index = self.position["entry_index"]
-
-        trade_value = qty * sell_price
-        fee = trade_value * self.fee_rate
-
-        pnl = (sell_price - avg_price) * qty - fee
-        pnl_rate = (sell_price - avg_price) / avg_price
-
-        self.cash += trade_value - fee
-
-        self.trades.append({
-            "type": "SELL",
-            "index": index,
-            "price": sell_price,
-            "qty": qty,
-            "trade_value": trade_value,
-            "fee": fee,
-            "cash": self.cash,
-            "pnl": pnl,
-            "pnl_rate": pnl_rate,
-            "hold_bars": index - entry_index,
-            "reason": reason,
-        })
-
-        self.position = None
-
-    def _check_exit_conditions(self, current_price, current_index):
-        if self.position is None:
-            return None
-
-        avg_price = self.position["avg_price"]
-        entry_index = self.position["entry_index"]
-
-        pnl_rate = (current_price - avg_price) / avg_price
-        hold_bars = current_index - entry_index
-
-        if self.stop_loss_rate is not None and pnl_rate <= -self.stop_loss_rate:
-            return "STOP_LOSS"
-
-        if self.take_profit_rate is not None and pnl_rate >= self.take_profit_rate:
-            return "TAKE_PROFIT"
-
-        if self.max_hold_bars is not None and hold_bars >= self.max_hold_bars:
-            return "MAX_HOLD_EXIT"
-
-        return None
-
-    def _calculate_equity(self, current_price):
-        equity = self.cash
-
-        if self.position is not None:
-            equity += self.position["qty"] * current_price
-
-        return equity
-
-    def _calculate_mdd(self):
-        if not self.equity_curve:
-            return 0
-
-        peak = self.equity_curve[0]
-        max_drawdown = 0
-
-        for equity in self.equity_curve:
-            if equity > peak:
-                peak = equity
-
-            drawdown = (peak - equity) / peak
-
-            if drawdown > max_drawdown:
-                max_drawdown = drawdown
-
-        return max_drawdown
-
-    def _forward_returns(self, data, index, entry_price):
-        result = {}
-
-        horizons = {
-            "return_3bars": 3,
-            "return_6bars": 6,
-            "return_12bars": 12,
-            "return_24bars": 24,
-        }
-
-        for name, bars in horizons.items():
-            target_index = index + bars
-
-            if target_index < len(data):
-                future_price = float(data.iloc[target_index]["close"])
-                result[name] = (future_price - entry_price) / entry_price
-            else:
-                result[name] = None
-
-        return result
-
-    def _signal_summary(self):
-        summary = {
-            "BUY": 0,
-            "WATCH": 0,
-            "SELL": 0,
-        }
-
-        for log in self.signal_logs:
-            action = log.get("action")
-
-            if action in summary:
-                summary[action] += 1
-
-        return summary
-
-    def _forward_return_summary(self):
-        summary = {}
-
-        for action in ["BUY", "WATCH", "SELL"]:
-            action_logs = [
-                log for log in self.signal_logs
-                if log.get("action") == action
-            ]
-
-            summary[action] = {}
-
-            for key in ["return_3bars", "return_6bars", "return_12bars", "return_24bars"]:
-                values = [
-                    log[key] for log in action_logs
-                    if log.get(key) is not None
-                ]
-
-                if values:
-                    avg_return = sum(values) / len(values)
-                    win_rate = len([v for v in values if v > 0]) / len(values)
-
-                    summary[action][key] = {
-                        "count": len(values),
-                        "avg_return": avg_return,
-                        "win_rate": win_rate,
-                    }
-                else:
-                    summary[action][key] = {
-                        "count": 0,
-                        "avg_return": 0,
-                        "win_rate": 0,
-                    }
-
-        return summary
-
-    def _result(self, symbol):
-        sells = [t for t in self.trades if t["type"] == "SELL"]
-
-        wins = [t for t in sells if t["pnl"] > 0]
-        losses = [t for t in sells if t["pnl"] <= 0]
-
-        total_return = (self.cash - self.initial_cash) / self.initial_cash
-        win_rate = len(wins) / len(sells) if sells else 0
-
-        avg_win = sum(t["pnl_rate"] for t in wins) / len(wins) if wins else 0
-        avg_loss = sum(t["pnl_rate"] for t in losses) / len(losses) if losses else 0
-
-        gross_profit = sum(t["pnl"] for t in wins) if wins else 0
-        gross_loss = abs(sum(t["pnl"] for t in losses)) if losses else 0
-
-        profit_factor = gross_profit / gross_loss if gross_loss > 0 else 0
-
-        avg_hold_bars = (
-            sum(t["hold_bars"] for t in sells) / len(sells)
-            if sells else 0
-        )
+        total_profit = sum(trade.get("profit", 0) for trade in sell_trades)
 
         return {
-            "symbol": symbol,
             "initial_cash": self.initial_cash,
             "final_cash": self.cash,
+            "total_profit": total_profit,
             "total_return": total_return,
             "trade_count": len(self.trades),
-            "completed_trades": len(sells),
+            "completed_trade_count": len(sell_trades),
+            "win_count": len(win_trades),
             "win_rate": win_rate,
-            "mdd": self._calculate_mdd(),
-            "avg_win": avg_win,
-            "avg_loss": avg_loss,
-            "profit_factor": profit_factor,
-            "avg_hold_bars": avg_hold_bars,
-            "signal_summary": self._signal_summary(),
-            "forward_return_summary": self._forward_return_summary(),
             "trades": self.trades,
-            "signal_logs": self.signal_logs,
-            "equity_curve": self.equity_curve,
+            "equity_curve": self.equity_curve
         }
+    
+    def print_summary(self, result):
+        print("========== 백테스트 결과 ==========")
+        print(f"초기 자금: {result['initial_cash']:,.0f}원")
+        print(f"최종 자금: {result['final_cash']:,.0f}원")
+        print(f"총 수익: {result['total_profit']:,.0f}원")
+        print(f"총 수익률: {result['total_return']:.2f}%")
+        print(f"전체 거래 수: {result['trade_count']}")
+        print(f"완료 거래 수: {result['completed_trade_count']}")
+        print(f"승리 거래 수: {result['win_count']}")
+        print(f"승률: {result['win_rate']:.2f}%")
+
+        print("\n========== 거래 내역 ==========")
+        for trade in result["trades"]:
+            print(trade)
+
+    def plot_result(self, data, result):
+        plt.figure(figsize=(14, 7))
+
+        plt.plot(data.index, data["close"], label="Close Price")
+
+        for trade in result["trades"]:
+            if trade["type"] == "BUY":
+                plt.scatter(
+                    trade["time"],
+                    trade["price"],
+                    marker="^",
+                    s=120,
+                    label="BUY"
+                )
+
+            elif trade["type"] in ["SELL", "FORCED_SELL"]:
+                plt.scatter(
+                    trade["time"],
+                    trade["price"],
+                    marker="v",
+                    s=120,
+                    label=trade["type"]
+                )
+
+        plt.title("Backtest Result")
+        plt.xlabel("Time")
+        plt.ylabel("Price")
+        plt.legend()
+        plt.grid(True)
+        plt.show()
