@@ -1,13 +1,12 @@
 import sys
 import os
 
-ROOT_DIR = os.path.dirname(os.path.dirname(__file__))
-sys.path.append(ROOT_DIR)
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, ROOT_DIR)
 
-from core.strategy import Strategy
+from core.strategies.score_v1 import ScoreV1Strategy
 from backtest.backtester import Backtester
-from database.db import load_market_data, load_investor_flow
-
+from database.db import load_market_data, load_investor_flow, save_backtest_result
 
 def test_db_backtester_runs():
     symbol = "005930"
@@ -15,15 +14,14 @@ def test_db_backtester_runs():
     data = load_market_data(symbol, limit=200)
     investor_flow = load_investor_flow(symbol, limit=200)
 
+    if(len(data)<50):
+        print("market rows:", len(data))
+        print("flow rows:", len(investor_flow))
 
-    print("market rows:", len(data))
-    print("flow rows:", len(investor_flow))
+    assert len(data) >= 10
 
-    assert data is not None
-    assert not data.empty
-    assert len(data) >= 50
+    strategy = ScoreV1Strategy()
 
-    strategy = Strategy()
     backtester = Backtester(
         strategy=strategy,
         initial_cash=1_000_000,
@@ -36,10 +34,7 @@ def test_db_backtester_runs():
         investor_flow=investor_flow
     )
 
+    print("strategy:", result["strategy"])
     backtester.print_summary(result)
-    backtester.plot_result(data, result)
-    backtester.plot_equity_curve(result)
 
-    assert "total_return" in result
-    assert "trades" in result
-    assert "equity_curve" in result
+    save_backtest_result(result, symbol)

@@ -5,7 +5,6 @@ ROOT_DIR = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(ROOT_DIR)
 
 import pandas as pd
-import matplotlib as plt
 
 from core.strategy import Strategy
 from backtest.backtester import Backtester

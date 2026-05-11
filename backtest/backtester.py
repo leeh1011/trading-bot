@@ -176,6 +176,7 @@ class Backtester:
         total_profit = sum(trade.get("profit", 0) for trade in sell_trades)
 
         return {
+            "strategy": self.strategy.__class__.__name__,
             "initial_cash": self.initial_cash,
             "final_cash": self.cash,
             "total_profit": total_profit,

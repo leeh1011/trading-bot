@@ -19,6 +19,7 @@ def init_db():
 
     create_market_data_table(conn)
     create_investor_flow_table(conn)
+    create_backtest_table(conn)
 
     cur.execute("""
     CREATE TABLE IF NOT EXISTS signals (
@@ -326,3 +327,72 @@ def load_investor_flow(symbol, limit=200):
         df[col] = pd.to_numeric(df[col])
 
     return df
+
+def create_backtest_table(conn):
+    cursor = conn.cursor()
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS backtest_results (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+        created_at TEXT,
+
+        strategy TEXT,
+        symbol TEXT,
+
+        initial_cash REAL,
+        final_cash REAL,
+
+        total_profit REAL,
+        total_return REAL,
+
+        trade_count INTEGER,
+        completed_trade_count INTEGER,
+
+        win_count INTEGER,
+        win_rate REAL
+    )
+    """)
+
+    conn.commit()
+
+def save_backtest_result(result, symbol):
+    conn = sqlite3.connect(DB_NAME)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+    INSERT INTO backtest_results (
+        created_at,
+        strategy,
+        symbol,
+        initial_cash,
+        final_cash,
+        total_profit,
+        total_return,
+        trade_count,
+        completed_trade_count,
+        win_count,
+        win_rate
+    )
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    """, (
+        datetime.now().isoformat(),
+
+        result.get("strategy"),
+        symbol,
+
+        result.get("initial_cash"),
+        result.get("final_cash"),
+
+        result.get("total_profit"),
+        result.get("total_return"),
+
+        result.get("trade_count"),
+        result.get("completed_trade_count"),
+
+        result.get("win_count"),
+        result.get("win_rate"),
+    ))
+
+    conn.commit()
+    conn.close()
