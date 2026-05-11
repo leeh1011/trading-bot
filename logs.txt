@@ -1342,3 +1342,375 @@ SAVING FLOW: 035420 {'datetime': '2026-05-08 22:24:11.309804', 'foreign_buy': 0,
 FLOW SAVED: 035420
 신호 없음: 035420
 다음 5분 대기...
+KIS Auto Trading Bot Started
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\main.py", line 182, in <module>
+    main()
+  File "C:\Users\ljeno\trading-bot\main.py", line 80, in main
+    api.get_token()
+  File "C:\Users\ljeno\trading-bot\utils\kis_api.py", line 51, in get_token
+    res = requests.post(url, headers=headers, json=body, timeout=10)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\urllib3\connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Users\ljeno\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 286, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\AppData\Local\Programs\Python\Python311\Lib\ssl.py", line 1314, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\AppData\Local\Programs\Python\Python311\Lib\ssl.py", line 1166, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+^CKIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+^CKIS Auto Trading Bot Started
+토큰 발급 실패: {'error_code': 'EGW00133', 'error_description': '접근토큰 발급 잠시 후 다시 시도하세요(1분당 1회)'}
+토큰 발급 실패: {'error_code': 'EGW00133', 'error_description': '접근토큰 발급 잠시 후 다시 시도하세요(1분당 1회)'}
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 연결 실패: urllib3 HTTPError ('Connection aborted.', ConnectionResetError(10054, '현재 연결은 원격 호스트에 의해 강제로 끊겼습니다', None, 10054, None))
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\ssl_.py", line 324, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\AppData\Local\Programs\Python\Python311\Lib\ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\AppData\Local\Programs\Python\Python311\Lib\ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "C:\Users\ljeno\AppData\Local\Programs\Python\Python311\Lib\ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [WinError 10054] 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 347, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\ssl_.py", line 324, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\AppData\Local\Programs\Python\Python311\Lib\ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\AppData\Local\Programs\Python\Python311\Lib\ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "C:\Users\ljeno\AppData\Local\Programs\Python\Python311\Lib\ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, '현재 연결은 원격 호스트에 의해 강제로 끊겼습니다', None, 10054, None))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\main.py", line 182, in <module>
+    main()
+  File "C:\Users\ljeno\trading-bot\main.py", line 89, in main
+    bot = TelegramBot(approval, execution)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 32, in __init__
+    self.updater.start_polling(
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\updater.py", line 422, in start_polling
+    self._init_thread(self.dispatcher.start, "dispatcher", ready=dispatcher_ready)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\updater.py", line 342, in _init_thread
+    name=f"Bot:{self.bot.id}:{name}",
+                ^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 377, in id
+    return self.bot.id
+           ^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 371, in bot
+    self._bot = self.get_me()
+                ^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 458, in get_me
+    result = self._post('getMe', timeout=timeout, api_kwargs=api_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\utils\request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', ConnectionResetError(10054, '현재 연결은 원격 호스트에 의해 강제로 끊겼습니다', None, 10054, None))
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+API 재시도 1/3: HTTPSConnectionPool(host='openapivts.koreainvestment.com', port=29443): Read timed out. (read timeout=10)
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 연결 실패: urllib3 HTTPError ('Connection aborted.', ConnectionResetError(10054, '현재 연결은 원격 호스트에 의해 강제로 끊겼습니다', None, 10054, None))
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\ssl_.py", line 324, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\AppData\Local\Programs\Python\Python311\Lib\ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\AppData\Local\Programs\Python\Python311\Lib\ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "C:\Users\ljeno\AppData\Local\Programs\Python\Python311\Lib\ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [WinError 10054] 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 347, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\ssl_.py", line 324, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\AppData\Local\Programs\Python\Python311\Lib\ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\AppData\Local\Programs\Python\Python311\Lib\ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "C:\Users\ljeno\AppData\Local\Programs\Python\Python311\Lib\ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, '현재 연결은 원격 호스트에 의해 강제로 끊겼습니다', None, 10054, None))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ljeno\trading-bot\main.py", line 182, in <module>
+    main()
+  File "C:\Users\ljeno\trading-bot\main.py", line 89, in main
+    bot = TelegramBot(approval, execution)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\notification\telegram_bot.py", line 32, in __init__
+    self.updater.start_polling(
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\updater.py", line 422, in start_polling
+    self._init_thread(self.dispatcher.start, "dispatcher", ready=dispatcher_ready)
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\ext\updater.py", line 342, in _init_thread
+    name=f"Bot:{self.bot.id}:{name}",
+                ^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 377, in id
+    return self.bot.id
+           ^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 371, in bot
+    self._bot = self.get_me()
+                ^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 458, in get_me
+    result = self._post('getMe', timeout=timeout, api_kwargs=api_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\utils\request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ljeno\trading-bot\venv\Lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', ConnectionResetError(10054, '현재 연결은 원격 호스트에 의해 강제로 끊겼습니다', None, 10054, None))
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+API 재시도 1/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 2/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 3/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+외인/기관 데이터 없음: 005930
+자동 익절 실행: {'action': 'SELL', 'symbol': '005930', 'price': 287000.0, 'reason': '자동 익절 8.76%'}
+자동 익절 결과: {'rt_cd': '0', 'msg_cd': '40590000', 'msg1': '모의투자 매도주문이 완료 되었습니다.', 'output': {'KRX_FWDG_ORD_ORGNO': '00950', 'ODNO': '0000033445', 'ORD_TMD': '140450'}}
+RSI=62.50 MA20=286387.50
+005930 처리 중 오류: 'action'
+API 재시도 1/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 2/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 3/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+외인/기관 데이터 없음: 000660
+RSI=78.95 MA20=1912250.00
+000660 처리 중 오류: 'action'
+API 재시도 1/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 2/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 3/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+외인/기관 데이터 없음: 035420
+RSI=50.00 MA20=211525.00
+035420 처리 중 오류: 'action'
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+API 재시도 1/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 2/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 3/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+외인/기관 데이터 없음: 005930
+RSI=58.33 MA20=286975.00
+005930 처리 중 오류: 'action'
+API 재시도 1/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 2/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 3/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+외인/기관 데이터 없음: 000660
+RSI=85.71 MA20=1918850.00
+000660 처리 중 오류: 'action'
+API 재시도 1/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 2/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 3/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+외인/기관 데이터 없음: 035420
+RSI=50.00 MA20=211425.00
+035420 처리 중 오류: 'action'
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'035420': {'qty': 9, 'avg_price': 209055.555}}}
+API 재시도 1/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 2/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 3/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+외인/기관 데이터 없음: 005930
+RSI=68.75 MA20=287337.50
+005930 처리 중 오류: 'action'
+API 재시도 1/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 2/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 3/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+외인/기관 데이터 없음: 000660
+RSI=81.25 MA20=1925450.00
+000660 처리 중 오류: 'action'
+API 재시도 1/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 2/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 3/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+외인/기관 데이터 없음: 035420
+RSI=37.50 MA20=211350.00
+035420 처리 중 오류: 'action'
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+API 재시도 1/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 2/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 3/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+외인/기관 데이터 없음: 005930
+RSI=47.37 MA20=287500.00
+005930 처리 중 오류: 'action'
+API 재시도 1/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 2/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 3/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+외인/기관 데이터 없음: 000660
+RSI=51.43 MA20=1930800.00
+000660 처리 중 오류: 'action'
+API 재시도 1/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 2/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+API 재시도 3/3: Invalid URL 'None/uapi/domestic-stock/v1/quotations/investor-trend-estimate': No scheme supplied. Perhaps you meant https://None/uapi/domestic-stock/v1/quotations/investor-trend-estimate?
+외인/기관 데이터 없음: 035420
+RSI=54.55 MA20=211225.00
+035420 처리 중 오류: 'action'
+다음 5분 대기...
