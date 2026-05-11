@@ -1342,3 +1342,126 @@ SAVING FLOW: 035420 {'datetime': '2026-05-08 22:24:11.309804', 'foreign_buy': 0,
 FLOW SAVED: 035420
 신호 없음: 035420
 다음 5분 대기...
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+외인/기관 데이터 없음: 005930
+005930 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 000660
+000660 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 035420
+035420 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+외인/기관 데이터 없음: 005930
+005930 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 000660
+000660 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 035420
+035420 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+외인/기관 데이터 없음: 005930
+005930 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 000660
+000660 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 035420
+035420 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+외인/기관 데이터 없음: 005930
+005930 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 000660
+000660 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 035420
+035420 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+외인/기관 데이터 없음: 005930
+005930 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 000660
+000660 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 035420
+035420 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+외인/기관 데이터 없음: 005930
+005930 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 000660
+000660 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 035420
+035420 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+외인/기관 데이터 없음: 005930
+005930 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 000660
+000660 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 035420
+035420 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+외인/기관 데이터 없음: 005930
+005930 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 000660
+000660 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 035420
+035420 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+외인/기관 데이터 없음: 005930
+005930 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 000660
+000660 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 035420
+035420 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+외인/기관 데이터 없음: 005930
+005930 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 000660
+000660 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 035420
+035420 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'005930': {'qty': 4, 'avg_price': 263875.0}, '035420': {'qty': 9, 'avg_price': 209055.555}}}
+외인/기관 데이터 없음: 005930
+005930 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 000660
+000660 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+외인/기관 데이터 없음: 035420
+035420 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-11 09:25:35.521268', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1135000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 0}
+SAVING FLOW: 005930 {'datetime': '2026-05-11 09:25:35.521268', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1135000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 0}
+FLOW SAVED: 005930
+005930 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+FLOW FETCHED: 000660 {'datetime': '2026-05-11 09:25:38.348948', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -25000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 0}
+SAVING FLOW: 000660 {'datetime': '2026-05-11 09:25:38.348948', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -25000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 0}
+FLOW SAVED: 000660
+000660 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+FLOW FETCHED: 035420 {'datetime': '2026-05-11 09:25:41.895675', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -110000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 0}
+SAVING FLOW: 035420 {'datetime': '2026-05-11 09:25:41.895675', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -110000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 0}
+FLOW SAVED: 035420
+035420 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
+다음 5분 대기...
