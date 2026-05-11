@@ -1465,3 +1465,102 @@ SAVING FLOW: 035420 {'datetime': '2026-05-11 09:25:41.895675', 'foreign_buy': 0,
 FLOW SAVED: 035420
 035420 처리 중 오류: cannot access local variable 'rsi' where it is not associated with a value
 다음 5분 대기...
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-11 16:27:21.228430', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2906000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 1442000}
+SAVING FLOW: 005930 {'datetime': '2026-05-11 16:27:21.228430', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2906000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 1442000}
+FLOW SAVED: 005930
+RSI=100.00 MA20=284550.00
+005930 처리 중 오류: 'action'
+FLOW FETCHED: 000660 {'datetime': '2026-05-11 16:27:24.160034', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -194000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 314000}
+SAVING FLOW: 000660 {'datetime': '2026-05-11 16:27:24.160034', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -194000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 314000}
+FLOW SAVED: 000660
+RSI=100.00 MA20=1878100.00
+000660 처리 중 오류: 'action'
+FLOW FETCHED: 035420 {'datetime': '2026-05-11 16:27:27.118075', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -116000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -35000}
+SAVING FLOW: 035420 {'datetime': '2026-05-11 16:27:27.118075', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -116000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -35000}
+FLOW SAVED: 035420
+RSI=100.00 MA20=211025.00
+035420 처리 중 오류: 'action'
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-11 16:32:30.370058', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2906000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 1442000}
+SAVING FLOW: 005930 {'datetime': '2026-05-11 16:32:30.370058', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2906000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 1442000}
+FLOW SAVED: 005930
+RSI=100.00 MA20=284550.00
+005930 처리 중 오류: 'action'
+FLOW FETCHED: 000660 {'datetime': '2026-05-11 16:32:33.517816', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -194000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 314000}
+SAVING FLOW: 000660 {'datetime': '2026-05-11 16:32:33.517816', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -194000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 314000}
+FLOW SAVED: 000660
+RSI=100.00 MA20=1878100.00
+000660 처리 중 오류: 'action'
+FLOW FETCHED: 035420 {'datetime': '2026-05-11 16:32:36.709426', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -116000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -35000}
+SAVING FLOW: 035420 {'datetime': '2026-05-11 16:32:36.709426', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -116000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -35000}
+FLOW SAVED: 035420
+RSI=100.00 MA20=211025.00
+035420 처리 중 오류: 'action'
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'035420': {'qty': 9, 'avg_price': 209055.555}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-11 16:37:40.785174', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2906000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 1442000}
+SAVING FLOW: 005930 {'datetime': '2026-05-11 16:37:40.785174', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2906000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 1442000}
+FLOW SAVED: 005930
+RSI=100.00 MA20=284550.00
+005930 처리 중 오류: 'action'
+FLOW FETCHED: 000660 {'datetime': '2026-05-11 16:37:44.043630', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -194000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 314000}
+SAVING FLOW: 000660 {'datetime': '2026-05-11 16:37:44.043630', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -194000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 314000}
+FLOW SAVED: 000660
+RSI=100.00 MA20=1878100.00
+000660 처리 중 오류: 'action'
+FLOW FETCHED: 035420 {'datetime': '2026-05-11 16:37:47.244889', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -116000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -35000}
+SAVING FLOW: 035420 {'datetime': '2026-05-11 16:37:47.244889', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -116000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -35000}
+FLOW SAVED: 035420
+RSI=100.00 MA20=211025.00
+035420 처리 중 오류: 'action'
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-11 16:42:50.111906', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2906000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 1442000}
+SAVING FLOW: 005930 {'datetime': '2026-05-11 16:42:50.111906', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2906000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 1442000}
+FLOW SAVED: 005930
+RSI=100.00 MA20=284550.00
+005930 처리 중 오류: 'action'
+FLOW FETCHED: 000660 {'datetime': '2026-05-11 16:42:52.923792', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -194000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 314000}
+SAVING FLOW: 000660 {'datetime': '2026-05-11 16:42:52.923792', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -194000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 314000}
+FLOW SAVED: 000660
+RSI=100.00 MA20=1878100.00
+000660 처리 중 오류: 'action'
+FLOW FETCHED: 035420 {'datetime': '2026-05-11 16:42:55.746959', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -116000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -35000}
+SAVING FLOW: 035420 {'datetime': '2026-05-11 16:42:55.746959', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -116000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -35000}
+FLOW SAVED: 035420
+RSI=100.00 MA20=211025.00
+035420 처리 중 오류: 'action'
+다음 5분 대기...
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 6007508.0, 'positions': {'035420': {'qty': 9, 'avg_price': 209055.555}}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-11 16:46:10.942940', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2906000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 1442000}
+SAVING FLOW: 005930 {'datetime': '2026-05-11 16:46:10.942940', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2906000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 1442000}
+FLOW SAVED: 005930
+[005930] RSI=100.00, close=285500.00, MA20=284550.00, volume=2014720, volume_avg=100736, foreign_net=-2906000, institution_net=1442000
+보유 없어서 SELL 무시: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-11 16:46:13.746453', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -194000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 314000}
+SAVING FLOW: 000660 {'datetime': '2026-05-11 16:46:13.746453', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -194000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 314000}
+FLOW SAVED: 000660
+[000660] RSI=100.00, close=1880000.00, MA20=1878100.00, volume=440213, volume_avg=22011, foreign_net=-194000, institution_net=314000
+보유 없어서 SELL 무시: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-11 16:46:16.594663', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -116000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -35000}
+SAVING FLOW: 035420 {'datetime': '2026-05-11 16:46:16.594663', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -116000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -35000}
+FLOW SAVED: 035420
+[035420] RSI=100.00, close=211500.00, MA20=211025.00, volume=44320, volume_avg=2216, foreign_net=-116000, institution_net=-35000
+신호 발생: {'action': 'SELL', 'signal': 'SELL', 'symbol': '035420', 'price': 211500.0, 'reason': 'SELL: RSI=100.00, foreign_net=-116000, institution_net=-35000', 'score': 0, 'reasons': ['RSI 과열 또는 외인/기관 동시 매도'], 'rsi': 100.0, 'ma20': 211025.0, 'volume': 44320.0, 'volume_avg': 2216.0, 'foreign_net': -116000.0, 'institution_net': -35000.0}
+다음 5분 대기...
