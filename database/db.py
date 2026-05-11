@@ -156,7 +156,8 @@ def create_market_data_table(conn):
         high REAL,
         low REAL,
         close REAL,
-        volume REAL
+        volume REAL,
+        UNIQUE(symbol, datetime)
     )
     """)
 
@@ -167,7 +168,7 @@ def save_market_data(symbol, row):
     cursor = conn.cursor()
 
     cursor.execute("""
-    INSERT INTO market_data (
+   INSERT OR IGNORE INTO market_data (
         symbol,
         datetime,
         open,
@@ -205,19 +206,20 @@ def create_investor_flow_table(conn):
 
         institution_buy REAL,
         institution_sell REAL,
-        institution_net REAL
+        institution_net REAL,
+
+        UNIQUE(symbol, datetime)
     )
     """)
 
     conn.commit()
 
 def save_investor_flow(symbol, flow):
-    print("SAVING FLOW:", symbol, flow)
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
 
     cursor.execute("""
-    INSERT INTO investor_flow (
+    INSERT OR IGNORE INTO investor_flow (
         symbol,
         datetime,
 
@@ -396,3 +398,18 @@ def save_backtest_result(result, symbol):
 
     conn.commit()
     conn.close()
+
+def get_market_data_count(symbol):
+    conn = sqlite3.connect(DB_NAME)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+    SELECT COUNT(*)
+    FROM market_data
+    WHERE symbol = ?
+    """, (symbol,))
+
+    count = cursor.fetchone()[0]
+
+    conn.close()
+    return count
