@@ -18,7 +18,7 @@ def test_db_backtester_runs():
         print("market rows:", len(data))
         print("flow rows:", len(investor_flow))
 
-    assert len(data) >= 10
+    assert len(data) >= 50
 
     strategy = ScoreV1Strategy()
 

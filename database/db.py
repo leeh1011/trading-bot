@@ -167,8 +167,16 @@ def save_market_data(symbol, row):
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
 
+    dt = row.get("datetime", None)
+
+    if dt is None:
+        dt = row.get("time", None)
+
+    if dt is None:
+        dt = row.name
+
     cursor.execute("""
-   INSERT OR IGNORE INTO market_data (
+    INSERT OR IGNORE INTO market_data (
         symbol,
         datetime,
         open,
@@ -180,7 +188,7 @@ def save_market_data(symbol, row):
     VALUES (?, ?, ?, ?, ?, ?, ?)
     """, (
         symbol,
-        str(row.name),
+        str(dt),
         float(row["open"]),
         float(row["high"]),
         float(row["low"]),

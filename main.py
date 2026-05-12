@@ -124,8 +124,10 @@ def main():
                         print(f"데이터 부족: {symbol}")
                         continue
 
-                    latest_row=df.iloc[-1]
-                    save_market_data(symbol,latest_row)
+                    for _, row in df.iterrows():
+                        save_market_data(symbol, row)
+
+                    print(f"MARKET SAVED: {symbol}, rows={len(df)}")
 
                     current_price = float(df.iloc[-1]["close"])
 
