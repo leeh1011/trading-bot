@@ -1,3 +1,8 @@
+from utils.logger import setup_logger
+
+logger = setup_logger(__name__)
+
+
 class Portfolio:
     def __init__(self, initial_cash=1_000_000):
         self.cash = initial_cash
@@ -8,7 +13,7 @@ class Portfolio:
         qty = int(amount // price)
 
         if qty <= 0:
-            print("매수 실패: 금액 부족")
+            ("매수 실패: 금액 부족")
             return None
 
         cost = qty * price
@@ -19,7 +24,7 @@ class Portfolio:
             "avg_price": price
         }
 
-        print(f"매수: {symbol} | 수량: {qty} | 가격: {price}")
+        logger.info(f"매수: {symbol} | 수량: {qty} | 가격: {price}")
 
         return {
             "symbol": symbol,
@@ -29,7 +34,7 @@ class Portfolio:
 
     def sell(self, symbol, price):
         if symbol not in self.positions:
-            print("매도 실패: 보유 없음")
+            logger.info("매도 실패: 보유 없음")
             return None
 
         pos = self.positions.pop(symbol)
@@ -37,7 +42,7 @@ class Portfolio:
         revenue = pos["qty"] * price
         self.cash += revenue
 
-        print(f"매도: {symbol} | 수량: {pos['qty']} | 가격: {price}")
+        logger.info(f"매도: {symbol} | 수량: {pos['qty']} | 가격: {price}")
 
         return {
             "symbol": symbol,

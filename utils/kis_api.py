@@ -14,7 +14,9 @@ from settings import (
 )
 
 from database.db import log_error
+from utils.logger import setup_logger
 
+logger = setup_logger(__name__)
 
 class KISAPI:
     def __init__(self):
@@ -53,7 +55,7 @@ class KISAPI:
 
             if "access_token" not in data:
                 log_error("KISAPI.get_token", str(data))
-                print("토큰 발급 실패:", data)
+                logger.warning("토큰 발급 실패:", data)
                 return None
 
             self.access_token = data["access_token"]
@@ -67,12 +69,12 @@ class KISAPI:
             else:
                 self.token_expired_at = datetime.datetime.now() + datetime.timedelta(hours=23)
 
-            print("KIS 토큰 발급 성공")
+            logger.info("KIS 토큰 발급 성공")
             return self.access_token
 
         except Exception as e:
             log_error("KISAPI.get_token", str(e))
-            print("토큰 요청 예외:", e)
+            logger.exception("토큰 요청 예외:", e)
             return None
 
     def _headers(self, tr_id):
@@ -128,7 +130,7 @@ class KISAPI:
                     "KISAPI._request_with_retry",
                     f"attempt={attempt}, error={e}"
                 )
-                print(f"API 재시도 {attempt}/{retries}: {e}")
+                logger.exception(f"API 재시도 {attempt}/{retries}: {e}")
                 time.sleep(1)
 
         return None
@@ -187,7 +189,7 @@ class KISAPI:
 
             if data.get("rt_cd") != "0":
                 log_error("KISAPI.get_minute_chart", str(data))
-                print("분봉 조회 실패:", data)
+                logger.warning("분봉 조회 실패:", data)
                 return pd.DataFrame()
 
             rows = data.get("output2", [])
@@ -302,7 +304,7 @@ class KISAPI:
 
             if data.get("rt_cd") != "0":
                 log_error("KISAPI.get_investor_flow", str(data))
-                print("외인/기관 조회 실패:", data)
+                logger.warning("외인/기관 조회 실패:", data)
                 return None
 
             rows = data.get("output2", [])
@@ -330,5 +332,5 @@ class KISAPI:
 
         except Exception as e:
             log_error("KISAPI.get_investor_flow", str(e))
-            print("외인/기관 파싱 오류:", e)
+            logger.exception("외인/기관 파싱 오류:", e)
             return None
