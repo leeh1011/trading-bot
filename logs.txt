@@ -1777,3 +1777,1375 @@ Traceback (most recent call last):
     print("다음 5분 대기...")
     ^^^^^^^^^^^^^^^^^^^^
 KeyboardInterrupt
+KIS Auto Trading Bot Started
+KIS 토큰 발급 성공
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {}}
+Telegram Bot 실행됨
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 11:27:34.763493', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 11:27:39.010952', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 11:27:43.300509', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -150000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 11:32:46.239272', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 11:32:51.450547', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 11:32:56.340619', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -150000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 11:38:02.520194', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 11:38:08.239312', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 11:38:14.286097', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -150000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 11:43:17.254646', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 11:43:20.193964', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 11:43:23.166012', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -150000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 11:48:33.700788', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 발생: {'action': 'BUY', 'symbol': '005930', 'price': 279500.0, 'reason': 'BUY SCORE=75: RSI 중립 이하(54.55), 가격이 MA20 위, 거래량 평균 이상, 기관 순매수(180000)'}
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 11:48:37.089462', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 11:48:41.383957', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -150000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 11:53:47.005054', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 11:53:49.959049', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 11:53:52.912308', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -150000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 11:58:58.286719', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 11:59:01.209196', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 11:59:04.177096', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -150000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 12:04:07.943837', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 12:04:11.467131', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 12:04:16.316062', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -150000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 12:09:24.274525', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 12:09:27.489496', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 12:09:31.366335', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -150000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 12:14:34.360787', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 12:14:37.307179', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 12:14:40.957127', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -150000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 12:19:47.585382', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 12:19:50.552916', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 12:19:55.147062', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -150000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 12:24:58.082795', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 12:25:01.129406', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 12:25:06.504996', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -150000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 12:30:21.706310', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 12:30:27.394386', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 12:30:32.081564', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -150000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 12:35:36.130891', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 12:35:40.044539', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 12:35:44.428842', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -150000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 12:40:53.983209', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 12:40:57.552370', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 12:41:01.364975', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -150000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 12:46:04.349257', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 12:46:07.303012', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 12:46:12.942511', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -150000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 12:51:24.082109', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 12:51:27.052426', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 12:51:30.004083', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -150000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 12:56:33.988714', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 12:56:36.926481', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 12:56:40.753475', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -150000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 13:01:52.044156', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 13:01:55.052252', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+매수 가능 수량 없음 - BUY 알림 차단: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 13:01:59.849548', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -150000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 13:07:02.785875', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 13:07:09.287026', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 13:07:12.254899', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -150000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 13:12:27.989381', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -2964000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 180000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 13:12:30.959047', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1183000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 56000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 13:12:34.964438', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -168000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -9000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 13:17:39.785807', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -4046000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 268000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 13:17:44.686534', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1470000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 120000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 13:17:47.618494', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -168000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -33000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 13:22:56.567147', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -4046000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 268000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 13:22:59.770988', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1470000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 120000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 13:23:04.177052', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -168000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -33000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 13:28:11.051833', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -4046000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 268000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 13:28:16.430743', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1470000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 120000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 13:28:22.226156', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -168000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -33000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 13:33:28.755431', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -4046000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 268000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 13:33:31.708057', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1470000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 120000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 13:33:37.036211', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -168000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -33000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 13:38:41.005156', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -4046000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 268000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 13:38:43.925536', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1470000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 120000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 13:38:46.879315', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -168000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -33000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 13:43:55.894817', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -4046000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 268000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 13:43:58.848392', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1470000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 120000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 13:44:03.598589', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -168000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -33000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 13:49:09.145641', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -4046000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 268000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 13:49:14.678029', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1470000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 120000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 13:49:18.052191', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -168000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -33000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 13:54:28.409905', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -4046000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 268000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 13:54:33.617251', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1470000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 120000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 13:54:36.957153', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -168000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -33000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 13:59:39.958558', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -4046000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 268000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 13:59:44.459185', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1470000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 120000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 13:59:49.759510', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -168000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -33000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 14:04:58.749439', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -4046000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 268000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 14:05:02.364470', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1470000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 120000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 14:05:06.535870', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -168000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -33000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 14:10:13.426678', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -4046000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 268000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 14:10:16.396898', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1470000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 120000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 14:10:19.348686', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -168000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -33000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 14:15:32.662435', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -4046000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 268000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 14:15:36.770247', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1470000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 120000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 14:15:40.583081', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -168000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -33000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 14:20:45.664768', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+이미 보유 중이라 BUY 무시: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 14:20:49.912349', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1566000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 14:20:53.395795', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 14:26:04.021570', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 14:26:10.972820', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 14:26:16.161305', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 14:31:19.130593', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 14:31:25.193078', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 14:31:32.004473', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 14:36:41.877523', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 14:36:44.816961', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 14:36:47.768215', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 14:41:51.285195', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 14:41:54.274401', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 14:41:57.973207', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 14:47:08.912211', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 14:47:14.176509', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 14:47:17.129599', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 14:52:23.250552', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 14:52:29.317155', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 14:52:34.932939', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 14:57:43.381142', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 14:57:46.677302', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 14:57:49.959348', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 15:02:53.613350', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 15:02:56.989636', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 15:03:00.130570', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 15:08:11.995202', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 15:08:17.192022', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 15:08:20.129991', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 15:13:23.098197', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 15:13:26.456837', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 15:13:31.207578', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 15:18:41.052226', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 15:18:44.018332', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 15:18:46.972978', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 15:23:50.397713', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 15:23:53.333711', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 15:23:56.270150', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 15:29:00.098455', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 15:29:03.051959', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 15:29:05.993346', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+보유 없어서 SELL 무시: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 15:34:08.929896', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 15:34:11.865092', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 15:34:14.817719', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 15:39:18.192317', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 15:39:21.177906', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 15:39:24.130225', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 15:44:27.083267', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 15:44:30.004327', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 15:44:32.945281', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 15:49:36.379730', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 15:49:39.333673', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 15:49:42.285140', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 15:54:45.227038', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 15:54:48.191303', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 15:54:51.144311', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 15:59:54.566560', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 15:59:57.521722', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 16:00:00.457810', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 16:05:03.406945', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 16:05:06.364481', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 16:05:09.302305', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+API 재시도 1/3: HTTPSConnectionPool(host='openapivts.koreainvestment.com', port=29443): Read timed out. (read timeout=10)
+API 재시도 2/3: HTTPSConnectionPool(host='openapivts.koreainvestment.com', port=29443): Read timed out. (read timeout=10)
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 16:10:35.506504', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 16:10:38.472941', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 16:10:41.429400', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 16:15:44.371116', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 16:15:47.302256', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+API 재시도 1/3: Expecting value: line 1 column 1 (char 0)
+API 재시도 2/3: Expecting value: line 1 column 1 (char 0)
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 16:15:53.055976', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+API 재시도 1/3: HTTPSConnectionPool(host='openapivts.koreainvestment.com', port=29443): Read timed out. (read timeout=10)
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 16:21:07.853819', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 16:21:10.818014', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 16:21:13.801851', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 16:26:16.728237', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 16:26:19.676305', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 16:26:22.660731', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 16:31:26.036557', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 16:31:28.988777', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 16:31:31.941399', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 16:36:34.911294', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 16:36:37.848438', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 16:36:40.817490', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 16:41:44.207786', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 16:41:47.177593', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 16:41:50.145544', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 16:46:53.097943', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 16:46:56.067788', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 16:46:59.037774', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 16:52:02.426433', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 16:52:05.427997', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 16:52:08.380974', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 16:57:11.343233', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 16:57:14.306322', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 16:57:17.254865', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 17:02:20.895900', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 17:02:23.849343', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 17:02:26.786551', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 17:07:29.738957', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 17:07:32.708811', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 17:07:35.694722', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 7063336.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 17:12:39.160506', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 17:12:42.101516', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 17:12:45.083414', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 17:17:48.051786', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 17:17:50.988531', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 17:17:53.926746', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 8206884.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 17:22:57.379977', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 17:23:00.349159', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 17:23:03.286332', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 17:28:06.224328', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 17:28:09.161869', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 17:28:12.113509', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 8206884.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 17:33:15.505092', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 17:33:18.472984', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 17:33:21.413463', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 17:38:24.367157', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 17:38:27.286034', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 17:38:30.239787', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 8206884.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 17:43:33.617975', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 17:43:36.602462', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 17:43:39.552473', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 17:48:42.504926', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 17:48:45.458415', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 17:48:48.411271', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 8206884.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 17:53:51.822250', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 17:53:54.771247', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 17:53:57.717916', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 17:59:00.664575', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 17:59:03.598358', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 17:59:06.567639', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 8206884.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 18:04:09.957088', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 18:04:12.909550', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 18:04:15.863442', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 18:09:18.803745', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 18:09:21.724413', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 18:09:24.693978', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 8206884.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 18:14:28.193094', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 18:14:31.162155', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 18:14:34.129943', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 18:19:37.098748', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 18:19:40.052804', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 18:19:43.020891', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 8206884.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 18:24:46.432241', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 18:24:49.365332', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 18:24:52.341253', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 18:29:55.310722', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 18:29:58.239552', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 18:30:01.193205', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 8206884.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 18:35:04.600116', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 18:35:07.598118', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 18:35:10.587115', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 18:40:13.536492', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 18:40:16.505474', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 18:40:19.692601', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 8206884.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 18:45:23.128978', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 18:45:26.262289', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 18:45:29.241573', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 18:50:32.773668', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 18:50:35.754089', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 18:50:38.716000', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+계좌 동기화 완료: {'cash': 8206884.0, 'positions': {'005930': {'qty': 5, 'avg_price': 279250.0}}}
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 18:55:42.113405', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 18:55:45.088976', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 18:55:48.203451', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...
+
+5분봉 시장 스캔 중...
+FLOW FETCHED: 005930 {'datetime': '2026-05-12 19:00:51.162116', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -5264000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 4000}
+FLOW SAVED: 005930
+MARKET SAVED: 005930, rows=30
+신호 없음: 005930
+FLOW FETCHED: 000660 {'datetime': '2026-05-12 19:00:54.098509', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -1488000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': 45000}
+FLOW SAVED: 000660
+MARKET SAVED: 000660, rows=30
+신호 없음: 000660
+FLOW FETCHED: 035420 {'datetime': '2026-05-12 19:00:57.067741', 'foreign_buy': 0, 'foreign_sell': 0, 'foreign_net': -181000, 'institution_buy': 0, 'institution_sell': 0, 'institution_net': -36000}
+FLOW SAVED: 035420
+MARKET SAVED: 035420, rows=30
+신호 없음: 035420
+다음 5분 대기...

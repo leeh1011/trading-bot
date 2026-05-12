@@ -46,33 +46,34 @@ class ApprovalManager:
     def reject(self, order_id):
         return self.pending.pop(order_id, None)
 
-    def cleanup(self, bot=None):
+    def cleanup(self, bot):
         now = time.time()
 
-        expired = [
-            (oid, data)
-            for oid, data in self.pending.items()
-            if data["expires"] < now
-        ]
+        expired_ids = []
 
-        for order_id, data in expired:
-            signal = data["signal"]
+        for order_id, order in self.pending.items():
+            if now - order["created_at"] > APPROVAL_TIMEOUT:
+                expired_ids.append(order_id)
 
-            if bot and data["chat_id"] and data["message_id"]:
+        for order_id in expired_ids:
+            order = self.pending.pop(order_id)
+
+            chat_id = order.get("chat_id")
+            message_id = order.get("message_id")
+            signal = order.get("signal", {})
+
+            if chat_id and message_id:
                 try:
                     bot.edit_message_text(
-                        chat_id=data["chat_id"],
-                        message_id=data["message_id"],
+                        chat_id=chat_id,
+                        message_id=message_id,
                         text=(
-                            "승인 시간 만료\n\n"
-                            f"종목: {signal['symbol']}\n"
-                            f"액션: {signal['action']}\n"
-                            f"가격: {signal['price']}\n"
-                            f"사유: {signal['reason']}"
+                            "신호 만료됨\n\n"
+                            f"종목: {signal.get('symbol')}\n"
+                            f"구분: {signal.get('action')}\n"
+                            f"가격: {signal.get('price')}\n"
+                            f"이유: {signal.get('reason')}"
                         )
                     )
-                except Exception as e:
-                    print(f"만료 메시지 수정 실패: {e}")
-
-            print(f"만료됨: {order_id}")
-            self.pending.pop(order_id, None)
+                except Exception:
+                    pass

@@ -11,7 +11,7 @@ echo ===============================
 echo Trading Bot Started %date% %time%
 echo ===============================
 
-python -u main.py >> logs.txt 2>&1
+python -u runner.py >> logs.txt 2>&1
 
 echo ===============================
 echo Bot Stopped %date% %time%
